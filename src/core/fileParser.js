@@ -11,8 +11,9 @@ function parseFile(filePath) {
 
     const result = {
         file: filePath,
-        function : [],
+        function: [],
         imports: [],
+        exports: [],
     }
 
     traverseAST(ast, result);
@@ -35,13 +36,23 @@ function traverseAST(node, result) {
         result.function.push(node.id ? node.id.name : 'anonymous');
     }
 
+    if (node.type === "ExportNamedDeclaration") {
+        if (node.declaration && node.declaration.id) {
+            result.exports.push(node.declaration.id.name);
+        }
+    }
+
+    if (node.type === "ExportDefaultDeclaration") {
+        result.hasDefaultExport = true;
+    }
+
     // traverse child nodes
 
-    for(let key in node) {
-        if(node[key] && typeof node[key] === 'object') {
+    for (let key in node) {
+        if (node[key] && typeof node[key] === 'object') {
             traverseAST(node[key], result);
         }
-}
+    }
 
 }
 
