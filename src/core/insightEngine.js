@@ -1,9 +1,9 @@
 function generateInsight(graph){
     const insights = {
-        "Entry Points": [],
-        "Unused Files": [],
-        "Highly Coupled Files": [],
-        "Central Files": []
+        "EntryPoints": [],
+        "UnusedFiles": [],
+        "HighlyCoupledFiles": [],
+        "CentralFiles": []
     };
 
     for (let file in graph) {
@@ -13,7 +13,7 @@ function generateInsight(graph){
         const importedByCount = node.importedBy.length;
 
         if (importedByCount === 0) {
-            insights["Entry Points"].push(
+            insights["EntryPoints"].push(
                 {
                     file: file,
                     imports: node.imports,
@@ -22,15 +22,15 @@ function generateInsight(graph){
         }
 
         if (importCount >= 3) {
-            insights["Highly Coupled Files"].push(file);
+            insights["HighlyCoupledFiles"].push(file);
         }
 
         if(importedByCount == 0 && importCount == 0 && !file.includes("app") && !file.includes("index")) {  
-            insights["Unused Files"].push(file);
+            insights["UnusedFiles"].push(file);
         }
 
         if(importedByCount >= 2) {
-            insights["Central Files"].push(
+            insights["CentralFiles"].push(
                 {
                     file: file,
                     usedBy: importedByCount,

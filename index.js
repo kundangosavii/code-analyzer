@@ -3,8 +3,9 @@ import { __dirname, __filename } from './config.js';
 
 import { getAllFiles } from "./src/core/fileLoader.js";
 import { parseFile } from "./src/core/fileParser.js";
-import {graphBuilder} from "./src/core/graphBuilder.js";
+import { graphBuilder } from "./src/core/graphBuilder.js";
 import { generateInsight } from "./src/core/insightEngine.js";
+import { generateReadableInsights } from "./src/core/outputEngine.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
@@ -34,6 +35,13 @@ function run() {
 
   console.log("\nInsights:\n");
   console.log(JSON.stringify(insights, null, 2));
+
+  const ReadableInsights = generateReadableInsights(insights);
+
+  console.log("\nReadable Insights:\n");
+  ReadableInsights.forEach((msg, i) => {
+    console.log(`${i + 1}. ${msg}`);
+  });
 
 }
 
