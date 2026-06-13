@@ -3,6 +3,7 @@ import { __dirname, __filename } from './config.js';
 
 import { getAllFiles } from "./src/core/fileLoader.js";
 import { parseFile } from "./src/core/fileParser.js";
+import {graphBuilder} from "./src/core/graphBuilder.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
@@ -22,6 +23,11 @@ function run() {
 
   console.log("Sample Output:\n");
   console.log(JSON.stringify(results.slice(0, 3), null, 2));
+
+  const graph = graphBuilder(results);
+
+  console.log("\nGraph Output:\n");
+  console.log(JSON.stringify(Object.entries(graph).slice(0, 3), null, 2));
 }
 
 run();
