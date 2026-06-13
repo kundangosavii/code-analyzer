@@ -3,5 +3,27 @@
     "@babel/parser": "^7.29.7",
     "fs-extra": "^11.3.5",
     "path": "^0.12.7"
-  }
+  },
+  "name": "code-analyser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundangosavii/code-analyzer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kundangosavii/code-analyzer/issues"
+  },
+  "homepage": "https://github.com/kundangosavii/code-analyzer#readme",
+  "description": ""
 }
