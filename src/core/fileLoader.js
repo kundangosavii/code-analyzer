@@ -3,6 +3,8 @@ import path from 'path';
 
 const SUPPORTED_EXTENSIONS = ['.js', '.ts', '.jsx', '.tsx', '.json'];
 
+
+
 export function getAllFiles(dirPath, arrayOfFiles = []) {
     const files = fs.readdirSync(dirPath);
 

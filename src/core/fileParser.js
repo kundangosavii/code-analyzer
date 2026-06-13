@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from '@babel/parser';
+import {detectLanguage} from './detectLanguage.js';
 
 function parseFile(filePath) {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -9,8 +10,11 @@ function parseFile(filePath) {
         plugins: ['jsx', 'typescript'],
     });
 
+    const language = detectLanguage(filePath);
+
     const result = {
         file: filePath,
+        language: language,
         function: [],
         imports: [],
         exports: [],
