@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs';
 
 function graphBuilder(parsedFile) {
     const graph = {};
@@ -30,10 +31,20 @@ function graphBuilder(parsedFile) {
 }
 
 function resolveImportPath(fromFile, importPath) {
-    if (importPath.startsWith(".")) {
-        return path.normalize(
-            path.join(path.dirname(fromFile), importPath)
-        );
+    if (!importPath.startsWith(".")) return null;
+
+    let fullPath = path.join(path.dirname(fromFile), importPath);
+
+    const possibleExtensions = [".js", ".ts", ".jsx", ".tsx"];
+
+    for (let ext of possibleExtensions) {
+        if (fs.existsSync(fullPath + ext)) {
+            return path.normalize(fullPath + ext);
+        }
+    }
+
+    if (fs.existsSync(fullPath)) {
+        return path.normalize(fullPath);
     }
 
     return null
