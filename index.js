@@ -58,6 +58,17 @@ function run() {
   saveInsights(TARGET_DIR, insights);
   saveReadableInsights(TARGET_DIR, ReadableInsights);
 
+  const date = new Date();
+  const dateString = date.toLocaleString();
+
+  const formattedDate = dateString.split(",")[1].trim();
+
+  const generateUniqeId = () => {
+    return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+  }
+
+  const UniqueId = generateUniqeId();
+  return UniqueId;
 }
 
 export { run}
