@@ -60,4 +60,4 @@ function run() {
 
 }
 
-run();
+export { run}
