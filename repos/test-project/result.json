@@ -1,0 +1,36 @@
+{
+  "C:\\code-analyser\\test-project\\app.js": {
+    "imports": [
+      "C:\\code-analyser\\test-project\\controllers\\userController.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\test-project\\controllers\\high.Controller.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\test-project\\controllers\\userController.js": {
+    "imports": [
+      "C:\\code-analyser\\test-project\\services\\userService.js",
+      "C:\\code-analyser\\test-project\\services\\userService.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\test-project\\app.js"
+    ]
+  },
+  "C:\\code-analyser\\test-project\\services\\userService.js": {
+    "imports": [
+      "C:\\code-analyser\\test-project\\utils\\helper.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\test-project\\controllers\\userController.js",
+      "C:\\code-analyser\\test-project\\controllers\\userController.js"
+    ]
+  },
+  "C:\\code-analyser\\test-project\\utils\\helper.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\test-project\\services\\userService.js"
+    ]
+  }
+}
