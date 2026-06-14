@@ -1,0 +1,28 @@
+{
+  "EntryPoints": [
+    {
+      "file": "C:\\code-analyser\\test-project\\app.js",
+      "imports": [
+        "C:\\code-analyser\\test-project\\controllers\\userController.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\test-project\\controllers\\high.Controller.js",
+      "imports": []
+    }
+  ],
+  "UnusedFiles": [
+    "C:\\code-analyser\\test-project\\controllers\\high.Controller.js"
+  ],
+  "HighlyCoupledFiles": [],
+  "CentralFiles": [
+    {
+      "file": "C:\\code-analyser\\test-project\\services\\userService.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\code-analyser\\test-project\\controllers\\userController.js",
+        "C:\\code-analyser\\test-project\\controllers\\userController.js"
+      ]
+    }
+  ]
+}
