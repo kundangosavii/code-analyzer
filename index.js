@@ -7,7 +7,7 @@ import { graphBuilder } from "./src/core/graphBuilder.js";
 import { generateInsight } from "./src/core/insightEngine.js";
 import { generateReadableInsights } from "./src/core/outputEngine.js";
 import { cloneRepo } from "./src/core/repoCloner.js";
-import { saveGraph, saveInsights } from "./src/core/saveInsights.js";
+import { saveGraph, saveInsights, saveReadableInsights } from "./src/core/saveInsights.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
@@ -56,6 +56,7 @@ function run() {
 
   saveGraph(TARGET_DIR, graph);
   saveInsights(TARGET_DIR, insights);
+  saveReadableInsights(TARGET_DIR, ReadableInsights);
 
 }
 
