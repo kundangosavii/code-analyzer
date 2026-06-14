@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@babel/parser": "^7.29.7",
+    "express": "^5.2.1",
     "fs-extra": "^11.3.5",
     "path": "^0.12.7",
     "simple-git": "^3.36.0"
@@ -12,7 +13,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node src/api/app.js"
   },
   "repository": {
     "type": "git",
