@@ -53,11 +53,7 @@ function run() {
   ReadableInsights.forEach((msg, i) => {
     console.log(`${i + 1}. ${msg}`);
   });
-
-  saveGraph(TARGET_DIR, graph);
-  saveInsights(TARGET_DIR, insights);
-  saveReadableInsights(TARGET_DIR, ReadableInsights);
-
+  
   const date = new Date();
   const dateString = date.toLocaleString();
 
@@ -68,7 +64,11 @@ function run() {
   }
 
   const UniqueId = generateUniqeId();
-  return UniqueId;
+
+  saveGraph(UniqueId, graph);
+  saveInsights(UniqueId, insights);
+  saveReadableInsights(UniqueId, ReadableInsights);
+
 }
 
 export { run}
