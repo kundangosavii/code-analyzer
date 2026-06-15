@@ -55,16 +55,6 @@ function run() {
     console.log(`${i + 1}. ${msg}`);
   });
   
-  const date = new Date();
-  const dateString = date.toLocaleString();
-
-  const formattedDate = dateString.split(",")[1].trim();
-
-  const generateUniqeId = () => {
-    return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
-  }
-
-  const UniqueId = generateUniqeId();
 
   const registerPath = path.join(__dirname, "repos", "register.json");
   console.log(`\nRegister Path: ${registerPath}`);
@@ -86,9 +76,6 @@ function run() {
   saveGraph(TARGET_DIR, graph);
   saveInsights(TARGET_DIR, insights);
   saveReadableInsights(TARGET_DIR, ReadableInsights);
-
-
-  // return UniqueId;
 
 }
 
