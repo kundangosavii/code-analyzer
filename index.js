@@ -1,5 +1,6 @@
 import path from "path";
 import { __dirname, __filename } from './config.js';
+import fs from "node:fs";
 
 import { getAllFiles } from "./src/core/fileLoader.js";
 import { parseFile } from "./src/core/fileParser.js";
@@ -54,16 +55,33 @@ function run() {
     console.log(`${i + 1}. ${msg}`);
   });
   
-  // const date = new Date();
-  // const dateString = date.toLocaleString();
+  const date = new Date();
+  const dateString = date.toLocaleString();
 
-  // const formattedDate = dateString.split(",")[1].trim();
+  const formattedDate = dateString.split(",")[1].trim();
 
-  // const generateUniqeId = () => {
-  //   return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
-  // }
+  const generateUniqeId = () => {
+    return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+  }
 
-  // const UniqueId = generateUniqeId();
+  const UniqueId = generateUniqeId();
+
+  const registerPath = path.join(__dirname, "repos", "register.json");
+  console.log(`\nRegister Path: ${registerPath}`);
+
+  const data = {
+    repoName: path.basename(TARGET_DIR),
+    UniqueId,
+    date: formattedDate
+  }
+
+  fs.writeFile(registerPath, JSON.stringify(data, null, 2), (err) => {
+    if (err) {
+      console.error("Error writing to register file:", err);
+    } else {
+      console.log("Successfully wrote to register file.");
+    }
+  });
 
   saveGraph(TARGET_DIR, graph);
   saveInsights(TARGET_DIR, insights);
@@ -74,4 +92,5 @@ function run() {
 
 }
 
-export { run }
+run();
+// export { run }
