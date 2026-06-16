@@ -117,6 +117,7 @@ const getGraphController = (req, res, repoId) => {
                 console.error('Error reading Graph file:', err);
                 return res.status(500).json({ message: 'An error occurred while fetching graph data.' });
             }
+            
             const graph = JSON.parse(data);
             res.status(200).json(graph);
         });
