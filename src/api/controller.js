@@ -17,14 +17,26 @@ const analyzeController = (req, res) => {
             return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
         }
 
-
-        const UniqueId = generateUniqeId();
-
         if (fs.existsSync(`C:/code-analyser/repos/test-project`)) {
             console.log("repo already analyzed")
+            fs.readFile(registerPath, 'utf-8', (err, data) => {
+                if (err) {
+                    console.log("Error ocurred while reading the file")
+                } else {
+                    const jsonData = JSON.parse(data);
+                    const UniqueId = jsonData.UniqueId;
+                    console.log("UniqueId getted successfully")
+                }
+            });
+
+            res.status(200).json({
+                message: 'Repository has already been analyzed.',
+                UniqueId
+            })
         }
         else {
             run()
+            const UniqueId = generateUniqeId();
             const data = {
                 repoName: path.basename(TARGET_DIR),
                 UniqueId,
@@ -37,16 +49,15 @@ const analyzeController = (req, res) => {
                     console.log("Successfully wrote to register file.");
                 }
             });
+            res.status(200).json({
+                message: 'Code analysis completed successfully.',
+                UniqueId
+            });
         }
-
-        res.status(200).json({
-            message: 'Code analysis completed successfully.',
-            UniqueId
-        });
-        } catch (error) {
-            console.error('Error during code analysis:', error);
-            res.status(500).json({ message: 'An error occurred during code analysis.' });
-        }
+    } catch (error) {
+        console.error('Error during code analysis:', error);
+        res.status(500).json({ message: 'An error occurred during code analysis.' });
+    }
 }
 
 const getInsightsController = (req, res) => {
