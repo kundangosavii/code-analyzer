@@ -56,28 +56,11 @@ function run() {
   });
   
 
-  const registerPath = path.join(__dirname, "repos", "register.json");
-  console.log(`\nRegister Path: ${registerPath}`);
-
-  const data = {
-    repoName: path.basename(TARGET_DIR),
-    UniqueId,
-    date: formattedDate
-  }
-
-  fs.writeFile(registerPath, JSON.stringify(data, null, 2), (err) => {
-    if (err) {
-      console.error("Error writing to register file:", err);
-    } else {
-      console.log("Successfully wrote to register file.");
-    }
-  });
-
   saveGraph(TARGET_DIR, graph);
   saveInsights(TARGET_DIR, insights);
   saveReadableInsights(TARGET_DIR, ReadableInsights);
 
 }
 
-run();
-// export { run }
+// run();
+export { run }
