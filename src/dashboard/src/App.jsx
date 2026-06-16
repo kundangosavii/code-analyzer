@@ -23,6 +23,7 @@ export default function App() {
     // TODO: call /insights API using repo.repoId
     console.log(repo.repoId)
     const insights = await getInsights(repo.repoId)
+    setInsights(insights)
     console.log("Insights:", insights)
   };
 
