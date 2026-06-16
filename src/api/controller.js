@@ -64,10 +64,13 @@ const analyzeController = (req, res) => {
     }
 }
 
-const getInsightsController = (req, res) => {
+const getInsightsController = (req, res, repoId) => {
     try {
+        const repoId = req.query.repoId;
 
-        fs.readFile(`C:/code-analyser/repos/test-project/insights.json`, 'utf-8', (err, data) => {
+        const repoName = repoId.split("_").slice(0, -1).join("_");
+
+        fs.readFile(`C:/code-analyser/repos/${repoName}/insights.json`, 'utf-8', (err, data) => {
             if (err) {
                 console.error('Error reading insights file:', err);
                 return res.status(500).json({ message: 'An error occurred while fetching insights.' });
