@@ -75,6 +75,7 @@ const getInsightsController = (req, res, repoId) => {
                 console.error('Error reading insights file:', err);
                 return res.status(500).json({ message: 'An error occurred while fetching insights.' });
             }
+            
             const insights = JSON.parse(data);
             res.status(200).json(insights);
         });
@@ -95,7 +96,7 @@ const getReadableInsightsController = (req, res, repoId) => {
                 console.error('Error reading Readable insights file:', err);
                 return res.status(500).json({ message: 'An error occurred while fetching readable insights.' });
             }
-            const ReadableInsights = JSON.parse(data);
+            const ReadableInsights = data.split('\n')
             res.status(200).json(ReadableInsights);
         });
     }
