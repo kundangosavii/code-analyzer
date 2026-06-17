@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "C:\\code-analyser\\test-project\\app.js",
+        "label": "app.js"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\test-project\\controllers\\high.Controller.js",
+        "label": "high.Controller.js"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\test-project\\controllers\\userController.js",
+        "label": "userController.js"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\test-project\\services\\userService.js",
+        "label": "userService.js"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\test-project\\utils\\helper.js",
+        "label": "helper.js"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "source": "C:\\code-analyser\\test-project\\app.js",
+        "target": "C:\\code-analyser\\test-project\\controllers\\userController.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\test-project\\controllers\\userController.js",
+        "target": "C:\\code-analyser\\test-project\\services\\userService.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\test-project\\services\\userService.js",
+        "target": "C:\\code-analyser\\test-project\\utils\\helper.js"
+      }
+    }
+  ]
+}
