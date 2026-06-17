@@ -13,14 +13,12 @@ export default function App() {
   const [insights, setInsights] = useState([]);
 
   const handleAnalyze = () => {
-    // TODO: call /analyze API
     const repoInput = analyzeRepo()
     console.log("Analyze:", repoInput);
   };
 
   const  handleSelectRepo = async (repo) => {
     setSelectedRepo(repo);
-    // TODO: call /insights API using repo.repoId
     console.log(repo.repoId)
     const insights = await getInsights(repo.repoId)
     setInsights(insights)
@@ -60,11 +58,11 @@ export default function App() {
               value={repoInput}
               onChange={(e) => setRepoInput(e.target.value)}
               placeholder="Enter GitHub repo URL or local path"
-              className="flex-1 border p-2 rounded"
+              className="flex-1 border mt-10 p-2 rounded"
             />
             <button
               onClick={handleAnalyze}
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-blue-500 text-white mt-10 px-4 py-2 rounded hover:bg-blue-600"
             >
               Analyze
             </button>
