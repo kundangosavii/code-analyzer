@@ -105,8 +105,39 @@ function saveReadableInsights(TARGET_DIR, readableInsights) {
     }
 }
 
+function saveGraphInNodeAndEdgesFormat(TARGET_DIR, graphNodesEdges) {
+    // Implementation for saving graph in node and edges format
+    const repoPath = path.join(newRepo, path.basename(TARGET_DIR))
+    const fullRepoPath = path.join(repoPath, 'graphNodesEdges.json')
+
+    if (!fs.existsSync(repoPath)) {
+            fs.mkdir(repoPath, { recursive: true }, (err) => {
+                if (err) {
+                    console.error('Error creating directory:', err);
+                } else {
+                    console.log('Directory created successfully!');
+                }
+            });
+        } else {
+            console.log('Directory already exists. Using existing directory...');
+        }
+    if (fs.existsSync(fullRepoPath)) {
+            console.log('File already exists. Overwriting...');
+        } else {
+
+            fs.writeFile(fullRepoPath, JSON.stringify(graphNodesEdges, null, 2), (err) => {
+                if (err) {
+                    console.error('Error writing file:', err);
+                } else {
+                    console.log('Results saved successfully!');
+                }
+            });
+        }
+}
+
 export { 
     saveGraph, 
     saveInsights, 
-    saveReadableInsights 
+    saveReadableInsights,
+    saveGraphInNodeAndEdgesFormat
 }
