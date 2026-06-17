@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
-import { analyzeRepo, getInsights } from './api.js'
+import { analyzeRepo, getInsights, getGraph } from './api.js'
+import Graph from "./components/Graph.jsx";
 
 export default function App() {
   const [repoInput, setRepoInput] = useState("");
@@ -11,18 +12,24 @@ export default function App() {
   ]);
   const [selectedRepo, setSelectedRepo] = useState(null);
   const [insights, setInsights] = useState([]);
+  const [graphData, setGraphData] = useState(null)
 
   const handleAnalyze = () => {
     const repoInput = analyzeRepo()
     console.log("Analyze:", repoInput);
   };
 
-  const  handleSelectRepo = async (repo) => {
+  const handleSelectRepo = async (repo) => {
     setSelectedRepo(repo);
     console.log(repo.repoId)
     const insights = await getInsights(repo.repoId)
     setInsights(insights)
     console.log("Insights:", insights)
+
+    const graphData = await getGraph(repo.repoId)
+    setGraphData(graphData)
+    console.log("Insights:", graphData)
+
   };
 
   return (
@@ -89,6 +96,10 @@ export default function App() {
               {item}
             </div>
           ))}
+
+          <h2 className="text-lg font-semibold mb-3 mt-5">Graph Visualization</h2>
+
+          <Graph graphData={graphData} />
 
         </div>
       </div>
