@@ -16,6 +16,7 @@ export default function Graph({ graphData }) {
           selector: "node",
           style: {
             label: "data(label)",
+            "background-color": '#ff0000'
           },
         },
         {
