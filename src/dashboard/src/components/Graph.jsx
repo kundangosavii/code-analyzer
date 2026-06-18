@@ -15,10 +15,31 @@ export default function Graph({ graphData }) {
         {
           selector: "node",
           style: {
-            label: "data(label)",
-            "background-color": '#ff0000'
+            label: "data(label)"
+          }
+        },
+
+        {
+          selector: 'node[type="controllers"]',
+          style: {
+            "background-color": "blue"
+          }
+        },
+
+        {
+          selector: 'node[type="services"]',
+          style:{
+            "background-color": "green"
           },
         },
+
+        {
+          selector: 'node[type="utils"]',
+          style:{
+            "background-color": "yellow"
+          },
+        },
+
         {
           selector: "edge",
           style: {
