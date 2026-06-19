@@ -2,6 +2,8 @@ import path from 'path';
 import fs from 'fs';
 import { __dirname, __filename } from '../../config.js';
 
+import { getIndirectImpact } from './dfsAnalysis.js';
+
 
 const newRepo = path.join(__dirname, 'repos')
 
@@ -24,7 +26,13 @@ function impactAnalysis(TARGET_DIR) {
                 let imports = [];
                 let importedBy = [];
                 imports = graphJson[file].imports;
-                importedBy = graphJson[file].importedBy;
+
+                const indirectImpacts = getIndirectImpact(graphJson, file);
+                indirectImpacts.forEach(indirect => {
+                    if (!importedBy.includes(indirect)) {
+                        importedBy.push(indirect);
+                    }
+                });
 
                 const fileName = file.split('\\').pop();
                 const importsName = imports.map(imp => imp.split('\\').pop());
