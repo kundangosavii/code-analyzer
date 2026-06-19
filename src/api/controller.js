@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { __dirname, __filename } from '../../config.js';
 import path from 'path';
 
+
 const analyzeController = (req, res) => {
     try {
         const TARGET_DIR = path.join(__dirname, "test-project");
@@ -150,10 +151,37 @@ const getGraphWithNodeAndEdgeController = (req, res, repoId) => {
     }
 }
 
+const getImpactAnalysisController = (req, res) => {
+    try {
+        const {repoId, filePath} = req.query;
+        // const filePath = req.query.file;
+
+        const repoName = repoId.split("_").slice(0, -1).join("_");
+
+        fs.readFile(`C:/code-analyser/repos/${repoName}/impactAnalysis.json`, 'utf-8', (err, data) => {
+            if (err) {
+                console.error('Error reading Impact Analysis file:', err);
+                return res.status(500).json({ message: 'An error occurred while fetching impact analysis data.' });
+            }
+
+            const impctAnalysis = JSON.parse(data);
+            const result = impctAnalysis[filePath]
+            console.log(result) 
+            console.log(filePath)
+            res.status(200).json(result);
+        });
+    }
+    catch (error) {
+        console.error('Error fetching impact analysis data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching impact analysis data.' });
+    }
+}
+
 export { 
     analyzeController, 
     getInsightsController,
     getReadableInsightsController,
     getGraphController,
-    getGraphWithNodeAndEdgeController
+    getGraphWithNodeAndEdgeController,
+    getImpactAnalysisController
 }
