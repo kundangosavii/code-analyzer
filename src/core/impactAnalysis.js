@@ -27,19 +27,26 @@ function impactAnalysis(TARGET_DIR) {
                 let importedBy = [];
                 imports = graphJson[file].imports;
 
-                const indirectImpacts = getIndirectImpact(graphJson, file);
+                const [indirectImpacts, directImpacts] = getIndirectImpact(graphJson, file);
                 indirectImpacts.forEach(indirect => {
                     if (!importedBy.includes(indirect)) {
                         importedBy.push(indirect);
                     }
                 });
+                directImpacts.forEach(direct => {
+                    if (!importedBy.includes(direct)) {
+                        importedBy.push(direct);
+                    }
+                });
+
 
                 const fileName = file.split('\\').pop();
                 const importsName = imports.map(imp => imp.split('\\').pop());
+                const importedByName = importedBy.map(imp => imp.split('\\').pop());
                 const Data = {
                     file: fileName,
-                    imports: importsName.join(', '),
-                    importedBy: importedBy
+                    direct: importsName.join(', '),
+                    indirect: importedByName
                 };
 
                 impactData.push(Data);
