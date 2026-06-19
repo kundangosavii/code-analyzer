@@ -67,5 +67,5 @@ function run() {
   impactAnalysis(TARGET_DIR);
 }
 
-run();
-// export { run }
+// run();
+export { run }
