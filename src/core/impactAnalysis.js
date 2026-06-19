@@ -26,9 +26,11 @@ function impactAnalysis(TARGET_DIR) {
                 imports = graphJson[file].imports;
                 importedBy = graphJson[file].importedBy;
 
+                const fileName = file.split('\\').pop();
+                const importsName = imports.map(imp => imp.split('\\').pop());
                 const Data = {
-                    file: file,
-                    imports: imports,
+                    file: fileName,
+                    imports: importsName.join(', '),
                     importedBy: importedBy
                 };
 
