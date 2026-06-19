@@ -1,41 +1,36 @@
 [
   {
-    "file": "C:\\code-analyser\\test-project\\app.js",
-    "imports": [
-      "C:\\code-analyser\\test-project\\controllers\\userController.js"
-    ],
-    "importedBy": []
+    "file": "app.js",
+    "direct": "userController.js",
+    "indirect": []
   },
   {
-    "file": "C:\\code-analyser\\test-project\\controllers\\high.Controller.js",
-    "imports": [],
-    "importedBy": []
+    "file": "high.Controller.js",
+    "direct": "",
+    "indirect": []
   },
   {
-    "file": "C:\\code-analyser\\test-project\\controllers\\userController.js",
-    "imports": [
-      "C:\\code-analyser\\test-project\\services\\userService.js",
-      "C:\\code-analyser\\test-project\\services\\userService.js"
-    ],
-    "importedBy": [
-      "C:\\code-analyser\\test-project\\app.js"
+    "file": "userController.js",
+    "direct": "userService.js, userService.js",
+    "indirect": [
+      "app.js"
     ]
   },
   {
-    "file": "C:\\code-analyser\\test-project\\services\\userService.js",
-    "imports": [
-      "C:\\code-analyser\\test-project\\utils\\helper.js"
-    ],
-    "importedBy": [
-      "C:\\code-analyser\\test-project\\controllers\\userController.js",
-      "C:\\code-analyser\\test-project\\controllers\\userController.js"
+    "file": "userService.js",
+    "direct": "helper.js",
+    "indirect": [
+      "app.js",
+      "userController.js"
     ]
   },
   {
-    "file": "C:\\code-analyser\\test-project\\utils\\helper.js",
-    "imports": [],
-    "importedBy": [
-      "C:\\code-analyser\\test-project\\services\\userService.js"
+    "file": "helper.js",
+    "direct": "",
+    "indirect": [
+      "userController.js",
+      "app.js",
+      "userService.js"
     ]
   }
 ]
