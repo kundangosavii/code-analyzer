@@ -30,7 +30,7 @@ function impactAnalysis(TARGET_DIR) {
                 const importsName = imports.map(imp => imp.split('\\').pop());
                 const Data = {
                     file: fileName,
-                    Direct: importsName.join(', '),
+                    imports: importsName.join(', '),
                     importedBy: importedBy
                 };
 
