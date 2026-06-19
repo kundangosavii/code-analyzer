@@ -10,6 +10,7 @@ import { generateReadableInsights } from "./src/core/outputEngine.js";
 import { cloneRepo } from "./src/core/repoCloner.js";
 import { saveGraph, saveInsights, saveReadableInsights, saveGraphInNodeAndEdgesFormat } from "./src/core/saveInsights.js";
 import { transformGraph } from "./src/core/graphTransformation.js";
+import { impactAnalysis } from "./src/core/impactAnalysis.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
@@ -63,7 +64,8 @@ function run() {
   saveReadableInsights(TARGET_DIR, ReadableInsights);
   saveGraphInNodeAndEdgesFormat(TARGET_DIR, graphNodesEdges);
 
+  impactAnalysis(TARGET_DIR);
 }
 
-// run();
-export { run }
+run();
+// export { run }
