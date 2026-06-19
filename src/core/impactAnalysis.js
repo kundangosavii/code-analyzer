@@ -23,30 +23,35 @@ function impactAnalysis(TARGET_DIR) {
         try {
             const graphJson = JSON.parse(data);
             for (const file in graphJson) {
-                let imports = [];
-                let importedBy = [];
-                imports = graphJson[file].imports;
+                let direct = [];
+                let indirect = [];
+                // imports = graphJson[file].imports;
 
                 const [indirectImpacts, directImpacts] = getIndirectImpact(graphJson, file);
-                indirectImpacts.forEach(indirect => {
-                    if (!importedBy.includes(indirect)) {
-                        importedBy.push(indirect);
-                    }
-                });
-                directImpacts.forEach(direct => {
-                    if (!importedBy.includes(direct)) {
-                        importedBy.push(direct);
-                    }
-                });
 
+
+
+                // indirectImpacts.forEach(indirect => {
+                //     if (!indirect.includes(indirect)) {
+                        
+                //     }
+                // });
+                // directImpacts.forEach(direct => {
+                //     if (!direct.includes(direct)) {
+                //         direct.push(direct);
+                //     }
+                // });
+
+                console.log(directImpacts)
+                console.log(indirectImpacts)
 
                 const fileName = file.split('\\').pop();
-                const importsName = imports.map(imp => imp.split('\\').pop());
-                const importedByName = importedBy.map(imp => imp.split('\\').pop());
+                const directName = directImpacts.map(imp => imp.split('\\').pop());
+                const indirectName = indirectImpacts.map(imp => imp.split('\\').pop());
                 const Data = {
                     file: fileName,
-                    direct: importsName.join(', '),
-                    indirect: importedByName
+                    direct: directName.join(', '),
+                    indirect: indirectName.join(', ')
                 };
 
                 impactData.push(Data);
