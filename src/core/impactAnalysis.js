@@ -9,8 +9,6 @@ function impactAnalysis(TARGET_DIR) {
 
     const repoPath = path.join(newRepo, path.basename(TARGET_DIR))
     const fullRepoPath = path.join(repoPath, 'graph.json')
-    console.log(`Starting impact analysis in directory: ${TARGET_DIR}`);
-    console.log(`Analyzing impact from file: ${fullRepoPath}`);
 
     fs.readFile(fullRepoPath, 'utf8', (err, data) => {
         if (err) {
@@ -35,7 +33,6 @@ function impactAnalysis(TARGET_DIR) {
                 };
 
                 impactData.push(Data);
-                console.log(impactData);
             }
             fs.writeFile(path.join(repoPath, 'impactAnalysis.json'), JSON.stringify(impactData, null, 2), (writeErr) => {
                     if (writeErr) {
