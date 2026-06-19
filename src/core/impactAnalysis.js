@@ -18,6 +18,8 @@ function impactAnalysis(TARGET_DIR) {
             return;
         }
 
+        let impactData = [];
+
         try {
             const graphJson = JSON.parse(data);
             for (const file in graphJson) {
@@ -26,8 +28,22 @@ function impactAnalysis(TARGET_DIR) {
                 imports = graphJson[file].imports;
                 importedBy = graphJson[file].importedBy;
 
-                console.log(imports.length, importedBy.length)
+                const Data = {
+                    file: file,
+                    imports: imports,
+                    importedBy: importedBy
+                };
+
+                impactData.push(Data);
+                console.log(impactData);
             }
+            fs.writeFile(path.join(repoPath, 'impactAnalysis.json'), JSON.stringify(impactData, null, 2), (writeErr) => {
+                    if (writeErr) {
+                        console.error(`Error writing impact analysis to file:`, writeErr);
+                    } else {
+                        console.log(`Impact analysis saved to ${path.join(repoPath, 'impactAnalysis.json')}`);
+                    }
+                });
         }
         catch (parseErr) {
             console.error(`Error parsing JSON from file ${fullRepoPath}:`, parseErr);
