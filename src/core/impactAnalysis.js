@@ -34,9 +34,10 @@ function impactAnalysis(TARGET_DIR) {
                 const indirectName = indirectImpacts.map(imp => imp.split('\\').pop());
                 const Data = {
                     file: file,
-                    lable: file.split('\\').pop(),
+                    label: file.split('\\').pop(),
                     direct: directName.join(', '),
-                    indirect: indirectName.join(', ')
+                    indirect: indirectName.join(', '),
+                    totalImpactedFiles: directImpacts.length + indirectImpacts.length
                 };
 
                 impactData.push(Data);
