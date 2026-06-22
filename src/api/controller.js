@@ -175,11 +175,36 @@ const getImpactAnalysisController = (req, res) => {
     }
 }
 
+const getDeadCodeController = (req, res) => {
+    try {
+        const repoId = req.query.repoId;
+
+        const repoName = repoId.split("_").slice(0, -1).join("_");
+
+        fs.readFile(`C:/code-analyser/repos/${repoName}/insights.json`, 'utf-8', (err, data) => {
+            if (err) {
+                console.error('Error reading Dead Code file:', err);
+                return res.status(500).json({ message: 'An error occurred while fetching dead code data.' });
+            }
+            
+            const insights = JSON.parse(data);
+            const deadcode = insights.UnusedFiles
+
+            res.status(200).json(deadcode);
+        });
+    }
+    catch (error) {
+        console.error('Error fetching dead code data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching dead code data.' });
+    }
+}
+
 export { 
     analyzeController, 
     getInsightsController,
     getReadableInsightsController,
     getGraphController,
     getGraphWithNodeAndEdgeController,
-    getImpactAnalysisController
+    getImpactAnalysisController,
+    getDeadCodeController
 }
