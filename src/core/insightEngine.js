@@ -11,14 +11,17 @@ function generateInsight(graph){
 
         const importCount = node.imports.length;
         const importedByCount = node.importedBy.length;
+        
 
         if (importedByCount === 0) {
-            insights["EntryPoints"].push(
-                {
-                    file: file,
-                    imports: node.imports,
-                }
-            );
+            if(importCount > 0) {
+                insights["EntryPoints"].push(
+                    {
+                        file: file,
+                        imports: node.imports,
+                    }
+                );
+            }
         }
 
         if (importCount >= 3) {
