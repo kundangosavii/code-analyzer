@@ -177,7 +177,7 @@ const getImpactAnalysisController = (req, res) => {
 
 const getDeadCodeController = (req, res) => {
     try {
-        const repoId = req.query.repoId;
+        const {repoId, file} = req.query;
 
         const repoName = repoId.split("_").slice(0, -1).join("_");
 
@@ -186,7 +186,7 @@ const getDeadCodeController = (req, res) => {
                 console.error('Error reading Dead Code file:', err);
                 return res.status(500).json({ message: 'An error occurred while fetching dead code data.' });
             }
-            
+
             const insights = JSON.parse(data);
             const deadcode = insights.UnusedFiles
 
@@ -199,6 +199,31 @@ const getDeadCodeController = (req, res) => {
     }
 }
 
+const getComplexityController = (req, res) => {
+    try {
+        const {repoId, file} = req.query;
+
+        const repoName = repoId.split("_").slice(0, -1).join("_");
+
+        fs.readFile(`C:/code-analyser/repos/${repoName}/complexity.json`, 'utf-8', (err, data) => {
+            if (err) {
+                console.error('Error reading Complexity file:', err);
+                return res.status(500).json({ message: 'An error occurred while fetching complexity data.' });
+            }
+
+            const fileName = file.split(path.sep).slice(-1)[0]; 
+            const complexity = JSON.parse(data);
+            const result = complexity[fileName];
+            console.log("Complexity result for file:", fileName, result);
+            res.status(200).json(result);
+        });
+    }
+    catch (error) {
+        console.error('Error fetching complexity data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching complexity data.' });
+    }
+}
+
 export { 
     analyzeController, 
     getInsightsController,
@@ -206,5 +231,6 @@ export {
     getGraphController,
     getGraphWithNodeAndEdgeController,
     getImpactAnalysisController,
-    getDeadCodeController
+    getDeadCodeController,
+    getComplexityController
 }
