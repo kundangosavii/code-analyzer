@@ -40,3 +40,12 @@ export async function getGraph(repoId) {
   return handleRespone(res);
 }
 
+export async function getImpact(repoId, filePath) {
+    const res = await fetch(`${Base_URL}/impact-analysis?repoId=${repoId}&file=${filePath}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    return handleRespone(res);
+}
