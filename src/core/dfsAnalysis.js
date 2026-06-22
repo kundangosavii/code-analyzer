@@ -1,3 +1,5 @@
+import path from "path";
+
 function getIndirectImpact(graphJson, startfile) {
     const visited = new Set();
     const indirect = new Set();
@@ -113,7 +115,10 @@ function calculateComplexity(graph, depthMap, cycles) {
 
         const score = (imports * 1) + (importedBy * 2) + (depth * 3) + (inCycle ? 5 : 0);
 
-        complexityScores[node] = {
+        const file = node.split(path.sep).slice(-1)[0]; 
+
+        complexityScores[file] = {
+            file: file,
             imports,
             importedBy,
             depth,
