@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-import { analyzeRepo, getInsights, getGraph, getImpact } from './api.js'
+import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode } from './api.js'
 import Graph from "./components/Graph.jsx";
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
   const [graphData, setGraphData] = useState(null)
 
   const [impact, setImpact] = useState([]);
+  const [deadCode, setDeadCode] = useState([])
 
   const handleAnalyze = () => {
     const repoInput = analyzeRepo()
@@ -39,12 +40,20 @@ export default function App() {
       const repo = selectedRepo
       const impact = await getImpact(repo.repoId, filePath);
       setImpact(impact);
-      console.log(impact)
-      console.log(impact.length)
     } catch (err) {
       console.error(err);
     }
   };
+
+  const handleDeadCode = async () => {
+    try {
+      const repo = selectedRepo
+      const deadCode = await getDeadCode(repo.repoId)
+      setDeadCode(deadCode)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <div className="h-screen flex bg-gray-100">
@@ -129,6 +138,25 @@ export default function App() {
               </div>
             );
           })}
+
+          <div>
+            <button
+              onClick={handleDeadCode}
+              className="bg-blue-500 text-white mt-10 px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Dead Code
+            </button>
+
+            {deadCode && deadCode.map((item, index) => {
+              return (
+                <div key={index} className='p-3 border mb-2 mt-5'>
+                  <h1 className='text-red-600 font-bold text-2xl underline'>Dead Code Files</h1>
+
+                  <div>{item}</div>
+                </div>
+              )
+            })}
+          </div>
 
         </div>
       </div>
