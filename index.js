@@ -8,9 +8,10 @@ import { graphBuilder } from "./src/core/graphBuilder.js";
 import { generateInsight } from "./src/core/insightEngine.js";
 import { generateReadableInsights } from "./src/core/outputEngine.js";
 import { cloneRepo } from "./src/core/repoCloner.js";
-import { saveGraph, saveInsights, saveReadableInsights, saveGraphInNodeAndEdgesFormat } from "./src/core/saveInsights.js";
+import { saveGraph, saveInsights, saveReadableInsights, saveGraphInNodeAndEdgesFormat, saveCyle } from "./src/core/saveInsights.js";
 import { transformGraph } from "./src/core/graphTransformation.js";
 import { impactAnalysis } from "./src/core/impactAnalysis.js";
+import { detectCycles } from "./src/core/dfsAnalysis.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
@@ -59,12 +60,16 @@ function run() {
   
   const graphNodesEdges = transformGraph(graph)
 
+  const cycle = detectCycles(graph)
+
   saveGraph(TARGET_DIR, graph);
   saveInsights(TARGET_DIR, insights);
   saveReadableInsights(TARGET_DIR, ReadableInsights);
   saveGraphInNodeAndEdgesFormat(TARGET_DIR, graphNodesEdges);
-
+  saveCyle(TARGET_DIR, cycle)
+  
   impactAnalysis(TARGET_DIR);
+
 }
 
 // run();
