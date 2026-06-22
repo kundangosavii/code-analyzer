@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode } from './api.js'
+import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode, getComplexity } from './api.js'
 import Graph from "./components/Graph.jsx";
 
 export default function App() {
@@ -16,6 +16,7 @@ export default function App() {
 
   const [impact, setImpact] = useState([]);
   const [deadCode, setDeadCode] = useState([])
+  const [complexity, setComplexity] = useState(null)
 
   const handleAnalyze = () => {
     const repoInput = analyzeRepo()
@@ -40,6 +41,9 @@ export default function App() {
       const repo = selectedRepo
       const impact = await getImpact(repo.repoId, filePath);
       setImpact(impact);
+      const complexity = await getComplexity(repo.repoId, filePath)
+      setComplexity(complexity)
+      console.log(complexity)
     } catch (err) {
       console.error(err);
     }
@@ -138,6 +142,32 @@ export default function App() {
               </div>
             );
           })}
+
+          { complexity && (
+            <div className='p-3 border mb-2 mt-5'>
+                <h1 className='text-red-600 font-bold text-2xl underline'>Complexity Analysis</h1>
+
+                <p className='mt-5'><strong>File:</strong></p>
+                <div>{complexity.file}</div>
+
+                <p className='mt-3'><strong>imports:</strong></p>
+                <div>{complexity.imports}</div>
+
+                <p className='mt-3'><strong>importedBy:</strong></p>
+                <div>{complexity.importedBy}</div>
+
+                <p className='mt-3'><strong>depth:</strong></p>
+                <div>{complexity.depth}</div>
+
+                <p className='mt-3'><strong>inCycle:</strong></p>
+                <div>{String(complexity.inCycle)}</div>
+
+                <p className='mt-3'><strong>Total complexity score of file:  </strong>{complexity.complexityScore}</p>
+              </div>
+
+          )}
+
+             
 
           <div>
             <button

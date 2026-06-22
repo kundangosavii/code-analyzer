@@ -59,3 +59,13 @@ export async function getDeadCode(repoId) {
         });
     return handleRespone(res);
 }
+
+export async function getComplexity(repoId, filePath) {
+    const res = await fetch(`${Base_URL}/complexity?repoId=${repoId}&file=${filePath}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+        });
+    return handleRespone(res);
+}
