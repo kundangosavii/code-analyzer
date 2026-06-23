@@ -5,10 +5,6 @@
       "imports": [
         "C:\\code-analyser\\test-project\\controllers\\userController.js"
       ]
-    },
-    {
-      "file": "C:\\code-analyser\\test-project\\controllers\\high.Controller.js",
-      "imports": []
     }
   ],
   "UnusedFiles": [
@@ -18,10 +14,11 @@
   "CentralFiles": [
     {
       "file": "C:\\code-analyser\\test-project\\services\\userService.js",
-      "usedBy": 2,
+      "usedBy": 3,
       "importedBy": [
         "C:\\code-analyser\\test-project\\controllers\\userController.js",
-        "C:\\code-analyser\\test-project\\controllers\\userController.js"
+        "C:\\code-analyser\\test-project\\controllers\\userController.js",
+        "C:\\code-analyser\\test-project\\utils\\helper.js"
       ]
     }
   ]

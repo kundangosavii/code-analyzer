@@ -1,0 +1,42 @@
+{
+  "app.js": {
+    "file": "app.js",
+    "imports": 1,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 1
+  },
+  "high.Controller.js": {
+    "file": "high.Controller.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "userController.js": {
+    "file": "userController.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "userService.js": {
+    "file": "userService.js",
+    "imports": 1,
+    "importedBy": 3,
+    "depth": 2,
+    "inCycle": true,
+    "complexityScore": 18
+  },
+  "helper.js": {
+    "file": "helper.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": true,
+    "complexityScore": 11
+  }
+}

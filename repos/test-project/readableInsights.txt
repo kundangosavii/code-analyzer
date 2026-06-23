@@ -1,4 +1,3 @@
 Start from "C:\code-analyser\test-project\app.js" — likely an entry point.
-Start from "C:\code-analyser\test-project\controllers\high.Controller.js" — likely an entry point.
 File "C:\code-analyser\test-project\controllers\high.Controller.js" is not imported anywhere — consider removing it.
 File "C:\code-analyser\test-project\services\userService.js" is heavily used — ensure it's well-maintained.

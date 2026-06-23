@@ -23,9 +23,9 @@
   {
     "file": "C:\\code-analyser\\test-project\\services\\userService.js",
     "label": "userService.js",
-    "direct": "userController.js, userController.js",
+    "direct": "userController.js, userController.js, helper.js",
     "indirect": "app.js",
-    "totalImpactedFiles": 3
+    "totalImpactedFiles": 4
   },
   {
     "file": "C:\\code-analyser\\test-project\\utils\\helper.js",

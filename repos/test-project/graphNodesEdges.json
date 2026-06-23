@@ -54,6 +54,12 @@
         "source": "C:\\code-analyser\\test-project\\services\\userService.js",
         "target": "C:\\code-analyser\\test-project\\utils\\helper.js"
       }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\test-project\\utils\\helper.js",
+        "target": "C:\\code-analyser\\test-project\\services\\userService.js"
+      }
     }
   ]
 }

@@ -24,11 +24,14 @@
     ],
     "importedBy": [
       "C:\\code-analyser\\test-project\\controllers\\userController.js",
-      "C:\\code-analyser\\test-project\\controllers\\userController.js"
+      "C:\\code-analyser\\test-project\\controllers\\userController.js",
+      "C:\\code-analyser\\test-project\\utils\\helper.js"
     ]
   },
   "C:\\code-analyser\\test-project\\utils\\helper.js": {
-    "imports": [],
+    "imports": [
+      "C:\\code-analyser\\test-project\\services\\userService.js"
+    ],
     "importedBy": [
       "C:\\code-analyser\\test-project\\services\\userService.js"
     ]
