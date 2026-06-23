@@ -199,6 +199,9 @@ const getDeadCodeController = (req, res) => {
     }
 }
 
+const getCycleController = (req, res) => {
+}
+
 const getComplexityController = (req, res) => {
     try {
         const {repoId, file} = req.query;
