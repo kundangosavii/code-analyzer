@@ -3,7 +3,7 @@ import { buildPrompt } from './promptBuilder.js';
 
 export async function llmService(analysisData) {
     try {
-        const prompt = buildPrompt(analysisData)
+        const prompt = await buildPrompt(analysisData)
 
         const llmResponse = await hfService(prompt);
 
