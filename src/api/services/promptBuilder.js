@@ -17,9 +17,8 @@ Circular Dependencies:
 ${cycles?.map(c => c.join(" → ")).join("\n") || "None"}
 
 Top Complex Files:
-${complexity
-  ?.slice(0, 5)
-  .map(f => `${f.file} (score: ${f.score})`)
+${Object.keys(complexity)
+  .map(f => `${f} (score: ${complexity[f].complexityScore})`)
   .join("\n") || "None"}
 
 Impact Summary:
