@@ -245,9 +245,6 @@ const getAIInsightsController = async (req, res) => {
 
         const complexityContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/complexity.json`, 'utf8');
         const complexity = JSON.parse(complexityContent);
-
-        console.log(Object.keys(complexity));
-        console.log(Object.values(complexity));
         
         const impactContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/impactAnalysis.json`, 'utf8');
         const impact = JSON.parse(impactContent);
