@@ -8,9 +8,7 @@ export async function llmService(analysisData) {
         const llmResponse = await hfService(prompt);
 
         const result =
-            llmResponse?.[0]?.generated_text ||
-            llmResponse?.generated_text ||
-            "No response from model";
+            llmResponse || "No response from the LLM service.";
 
         return result;
 

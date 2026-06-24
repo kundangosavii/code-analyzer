@@ -12,31 +12,12 @@ export async function hfService(prompt) {
             messages: [
                 {
                     role: "user",
-                    content: "What is the capital of France?",
+                    content: prompt,
                 },
             ],
         });
 
-        console.log(chatCompletion.choices[0].message);
-
-        // const response = await axios.post(
-        //     HF_API_URL,
-        //     {
-        //         input: prompt,
-        //         parameters : {
-        //             temperature: 0.7,
-        //             max_new_tokens: 500,
-        //         }
-        //     },
-        //     {
-        //         headers: {
-        //             Authorization: `Bearer ${process.env.HF_API_KEY}`,
-        //             contentType: 'application/json',
-        //         },
-        //     }
-        // )
-
-        // return response.data;
+        return chatCompletion.choices[0].message.content;
     }
     catch (error) {
         console.error("Error in hfService:", error);
