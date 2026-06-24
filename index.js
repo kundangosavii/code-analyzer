@@ -11,7 +11,7 @@ import { cloneRepo } from "./src/core/repoCloner.js";
 import { saveGraph, saveInsights, saveReadableInsights, saveGraphInNodeAndEdgesFormat, saveCycle, saveComplexity } from "./src/core/saveInsights.js";
 import { transformGraph } from "./src/core/graphTransformation.js";
 import { impactAnalysis } from "./src/core/impactAnalysis.js";
-import { detectCycles, calculateDepth, calculateComplexity } from "./src/core/dfsAnalysis.js";
+import { detectCycles, calculateDepth, calculateComplexity   } from "./src/core/dfsAnalysis.js";
 
 const TARGET_DIR = path.join(__dirname, "test-project");
 
