@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { __dirname, __filename } from '../../config.js';
 import path from 'path';
 
+import { llmService } from '../services/llmService.js';
 
 const analyzeController = (req, res) => {
     try {
@@ -227,6 +228,22 @@ const getComplexityController = (req, res) => {
     }
 }
 
+const getAIInsightsController = async (req, res) => {
+   try {
+     const analysisData = req.body;
+ 
+     const insights = await llmService(analysisData);
+
+     res.status(200).json({
+        succuss: true,
+        insights
+     })
+     
+   } catch (error) {
+     console.error('Error fetching AI insights:', error);
+     res.status(500).json({ message: 'An error occurred while fetching AI insights.' });
+   }
+};
 export { 
     analyzeController, 
     getInsightsController,
@@ -235,5 +252,6 @@ export {
     getGraphWithNodeAndEdgeController,
     getImpactAnalysisController,
     getDeadCodeController,
-    getComplexityController
+    getComplexityController,
+    getAIInsightsController
 }

@@ -7,7 +7,8 @@ import {
     getGraphWithNodeAndEdgeController,
     getImpactAnalysisController,
     getDeadCodeController,
-    getComplexityController
+    getComplexityController,
+    getAIInsightsController
 } from './controller.js'
 
 const router = Router()
@@ -20,5 +21,6 @@ router.get('/graphNodesEdges', getGraphWithNodeAndEdgeController);
 router.get('/impact-analysis', getImpactAnalysisController)
 router.get('/dead-code', getDeadCodeController)
 router.get('/complexity', getComplexityController)
+router.get('/ai-insights', getAIInsightsController)
 
 export default router;
