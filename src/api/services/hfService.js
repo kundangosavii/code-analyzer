@@ -1,7 +1,6 @@
 
 import { InferenceClient } from "@huggingface/inference";
 
-// const HF_TOKEN='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'
 
 
 export async function hfService(prompt) {
