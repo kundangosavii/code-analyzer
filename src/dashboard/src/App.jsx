@@ -36,9 +36,6 @@ export default function App() {
     setGraphData(graphData)
     console.log("Insights:", graphData)
 
-    const aiinsights = await getAIInsights(repo.repoId)
-    setCleanedInsights(aiinsights.insights)
-
   };
 
   const handleNodeClick = async (filePath) => {
@@ -60,6 +57,16 @@ export default function App() {
       const deadCode = await getDeadCode(repo.repoId)
       setDeadCode(deadCode)
     } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleAiInsights = async () => {
+    try{
+      const repo = selectedRepo
+      const aiinsights = await getAIInsights(repo.repoId)
+      setCleanedInsights(aiinsights.insights)
+    } catch (err){
       console.log(err)
     }
   }
@@ -193,7 +200,17 @@ export default function App() {
             })}
           </div>
 
-          <Insights content={cleanedInsights} />
+          <div>
+            <button
+              onClick={handleAiInsights}
+              className="bg-red-600 text-white mt-10 px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Get AI Insights
+            </button>
+
+            <Insights content={cleanedInsights} />
+          </div>
+
 
         </div>
       </div>
