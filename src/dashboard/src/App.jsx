@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 
-import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode, getComplexity } from './api.js'
+import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode, getComplexity, getAIInsights } from './api.js'
 import Graph from "./components/Graph.jsx";
+import Insights from "./components/Markdown.jsx"
 
 export default function App() {
   const [repoInput, setRepoInput] = useState("");
@@ -13,6 +14,7 @@ export default function App() {
   const [selectedRepo, setSelectedRepo] = useState(null);
   const [insights, setInsights] = useState([]);
   const [graphData, setGraphData] = useState(null)
+  const [cleanedInsights, setCleanedInsights] = useState(null)
 
   const [impact, setImpact] = useState([]);
   const [deadCode, setDeadCode] = useState([])
@@ -33,6 +35,9 @@ export default function App() {
     const graphData = await getGraph(repo.repoId)
     setGraphData(graphData)
     console.log("Insights:", graphData)
+
+    const aiinsights = await getAIInsights(repo.repoId)
+    setCleanedInsights(aiinsights.insights)
 
   };
 
@@ -187,6 +192,8 @@ export default function App() {
               )
             })}
           </div>
+
+          <Insights content={cleanedInsights} />
 
         </div>
       </div>
