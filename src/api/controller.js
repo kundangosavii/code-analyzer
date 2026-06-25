@@ -256,12 +256,14 @@ const getAIInsightsController = async (req, res) => {
             impact
         };
 
-        const insights = await llmService(analysisData);
+        const data = await llmService(analysisData);
+
+        console.log(typeof data)
 
 
         res.status(200).json({
-            succuss: true,
-            insights
+            success: true,
+            insights: data
         })
 
     } catch (error) {
