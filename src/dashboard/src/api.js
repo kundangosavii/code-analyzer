@@ -69,3 +69,13 @@ export async function getComplexity(repoId, filePath) {
         });
     return handleRespone(res);
 }
+
+export async function getAIInsights(repoId) {
+    const res = await fetch(`${Base_URL}/ai-insights?repoId=${repoId}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    return handleRespone(res);
+}
