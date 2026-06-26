@@ -45,11 +45,20 @@ const analyzeController = (req, res) => {
         else {
             run(repoUrl)
             const UniqueId = generateUniqeId();
-            const data = {
+            const newObj = {
                 repoName: path.basename(TARGET_DIR),
                 UniqueId,
                 date: formattedDate
             }
+
+            let data = [];
+            if (fs.existsSync(registerPath)) {
+                const content = fs.readFileSync(registerPath, "utf-8");
+                data = content ? JSON.parse(content) : [];
+            }
+
+            data.push(newObj)
+
             fs.writeFile(registerPath, JSON.stringify(data, null, 2), (err) => {
                 if (err) {
                     console.error("Error writing to register file:", err);
@@ -57,6 +66,8 @@ const analyzeController = (req, res) => {
                     console.log("Successfully wrote to register file.");
                 }
             });
+
+
             res.status(200).json({
                 message: 'Code analysis completed successfully.',
                 UniqueId
@@ -247,7 +258,7 @@ const getAIInsightsController = async (req, res) => {
 
         const complexityContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/complexity.json`, 'utf8');
         const complexity = JSON.parse(complexityContent);
-        
+
         const impactContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/impactAnalysis.json`, 'utf8');
         const impact = JSON.parse(impactContent);
 
