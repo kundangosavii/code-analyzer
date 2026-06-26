@@ -1,0 +1,57 @@
+{
+  "EntryPoints": [
+    {
+      "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\index.js",
+      "imports": [
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\DB\\db.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js"
+      ]
+    }
+  ],
+  "UnusedFiles": [
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\enrollment.model.js",
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lessonProgress.model.js",
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\order.model.js"
+  ],
+  "HighlyCoupledFiles": [
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+    "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+  ],
+  "CentralFiles": [
+    {
+      "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\user.model.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+      ]
+    },
+    {
+      "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js",
+      "usedBy": 3,
+      "importedBy": [
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+      ]
+    },
+    {
+      "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiResponse.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js"
+      ]
+    },
+    {
+      "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js",
+      "usedBy": 3,
+      "importedBy": [
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+        "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+      ]
+    }
+  ]
+}

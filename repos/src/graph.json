@@ -1,0 +1,143 @@
+{
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\user.route.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\course.route.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\index.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\constant.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\DB\\db.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiResponse.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\course.model.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\section.model.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lesson.model.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\course.route.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiResponse.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\user.model.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\user.route.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\DB\\db.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\constant.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\index.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\index.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\DB\\db.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\user.model.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\user.route.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\course.model.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\enrollment.model.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lesson.model.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lessonProgress.model.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\order.model.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\section.model.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\user.model.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\course.route.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\user.route.js": {
+    "imports": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiResponse.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+      "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js"
+    ]
+  }
+}

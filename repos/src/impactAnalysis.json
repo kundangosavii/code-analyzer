@@ -1,0 +1,135 @@
+[
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\app.js",
+    "label": "app.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\constant.js",
+    "label": "constant.js",
+    "direct": "db.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\course.controller.js",
+    "label": "course.controller.js",
+    "direct": "course.route.js",
+    "indirect": "app.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\controllers\\user.controller.js",
+    "label": "user.controller.js",
+    "direct": "user.route.js",
+    "indirect": "app.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\DB\\db.js",
+    "label": "db.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\index.js",
+    "label": "index.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\middleware\\auth.middleware.js",
+    "label": "auth.middleware.js",
+    "direct": "user.route.js",
+    "indirect": "app.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\course.model.js",
+    "label": "course.model.js",
+    "direct": "course.controller.js",
+    "indirect": "course.route.js, app.js, index.js",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\enrollment.model.js",
+    "label": "enrollment.model.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lesson.model.js",
+    "label": "lesson.model.js",
+    "direct": "course.controller.js",
+    "indirect": "course.route.js, app.js, index.js",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\lessonProgress.model.js",
+    "label": "lessonProgress.model.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\order.model.js",
+    "label": "order.model.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\section.model.js",
+    "label": "section.model.js",
+    "direct": "course.controller.js",
+    "indirect": "course.route.js, app.js, index.js",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\models\\user.model.js",
+    "label": "user.model.js",
+    "direct": "user.controller.js, auth.middleware.js",
+    "indirect": "user.route.js, app.js, index.js",
+    "totalImpactedFiles": 5
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\course.route.js",
+    "label": "course.route.js",
+    "direct": "app.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\routes\\user.route.js",
+    "label": "user.route.js",
+    "direct": "app.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiError.js",
+    "label": "ApiError.js",
+    "direct": "course.controller.js, user.controller.js, auth.middleware.js",
+    "indirect": "course.route.js, app.js, index.js, user.route.js",
+    "totalImpactedFiles": 7
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\ApiResponse.js",
+    "label": "ApiResponse.js",
+    "direct": "course.controller.js, user.controller.js",
+    "indirect": "course.route.js, app.js, index.js, user.route.js",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src\\utils\\asyncHandler.js",
+    "label": "asyncHandler.js",
+    "direct": "course.controller.js, user.controller.js, auth.middleware.js",
+    "indirect": "course.route.js, app.js, index.js, user.route.js",
+    "totalImpactedFiles": 7
+  }
+]

@@ -1,0 +1,11 @@
+Start from "C:\web devolapment\courseMart_project\courseMart\backend\src\index.js" — likely an entry point.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\models\enrollment.model.js" is not imported anywhere — consider removing it.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\models\lessonProgress.model.js" is not imported anywhere — consider removing it.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\models\order.model.js" is not imported anywhere — consider removing it.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\controllers\course.controller.js" has many dependencies — consider refactoring.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\controllers\user.controller.js" has many dependencies — consider refactoring.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\middleware\auth.middleware.js" has many dependencies — consider refactoring.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\models\user.model.js" is heavily used — ensure it's well-maintained.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\utils\ApiError.js" is heavily used — ensure it's well-maintained.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\utils\ApiResponse.js" is heavily used — ensure it's well-maintained.
+File "C:\web devolapment\courseMart_project\courseMart\backend\src\utils\asyncHandler.js" is heavily used — ensure it's well-maintained.
