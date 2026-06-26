@@ -1,17 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
-import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode, getComplexity, getAIInsights } from './api.js'
+import { analyzeRepo, getInsights, getGraph, getImpact, getDeadCode, getComplexity, getAIInsights, getRepos } from './api.js'
 import Graph from "./components/Graph.jsx";
 import Insights from "./components/Markdown.jsx"
 
 export default function App() {
   const [repoInput, setRepoInput] = useState("");
-  const [repos, setRepos] = useState([
-    { repoId: "repo_2", name: "test-repo" },
-    { repoId: "test-project_32126", name: "test-project" },
-    { repoId: "src_113849", name: "src"}
-  ]);
+  const [repos, setRepos] = useState([]);
   const [selectedRepo, setSelectedRepo] = useState(null);
   const [insights, setInsights] = useState([]);
   const [graphData, setGraphData] = useState(null)
@@ -20,6 +16,19 @@ export default function App() {
   const [impact, setImpact] = useState([]);
   const [deadCode, setDeadCode] = useState([])
   const [complexity, setComplexity] = useState(null)
+
+  useEffect(() => {
+    const loadRepos = async () => {
+      try {
+        const data = await getRepos();
+        setRepos(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    loadRepos();
+  }, []);
 
   const handleAnalyze = () => {
     console.log(repoInput)
@@ -63,11 +72,11 @@ export default function App() {
   }
 
   const handleAiInsights = async () => {
-    try{
+    try {
       const repo = selectedRepo
       const aiinsights = await getAIInsights(repo.repoId)
       setCleanedInsights(aiinsights.insights)
-    } catch (err){
+    } catch (err) {
       console.log(err)
     }
   }
@@ -156,31 +165,31 @@ export default function App() {
             );
           })}
 
-          { complexity && (
+          {complexity && (
             <div className='p-3 border mb-2 mt-5'>
-                <h1 className='text-red-600 font-bold text-2xl underline'>Complexity Analysis</h1>
+              <h1 className='text-red-600 font-bold text-2xl underline'>Complexity Analysis</h1>
 
-                <p className='mt-5'><strong>File:</strong></p>
-                <div>{complexity.file}</div>
+              <p className='mt-5'><strong>File:</strong></p>
+              <div>{complexity.file}</div>
 
-                <p className='mt-3'><strong>imports:</strong></p>
-                <div>{complexity.imports}</div>
+              <p className='mt-3'><strong>imports:</strong></p>
+              <div>{complexity.imports}</div>
 
-                <p className='mt-3'><strong>importedBy:</strong></p>
-                <div>{complexity.importedBy}</div>
+              <p className='mt-3'><strong>importedBy:</strong></p>
+              <div>{complexity.importedBy}</div>
 
-                <p className='mt-3'><strong>depth:</strong></p>
-                <div>{complexity.depth}</div>
+              <p className='mt-3'><strong>depth:</strong></p>
+              <div>{complexity.depth}</div>
 
-                <p className='mt-3'><strong>inCycle:</strong></p>
-                <div>{String(complexity.inCycle)}</div>
+              <p className='mt-3'><strong>inCycle:</strong></p>
+              <div>{String(complexity.inCycle)}</div>
 
-                <p className='mt-3'><strong>Total complexity score of file:  </strong>{complexity.complexityScore}</p>
-              </div>
+              <p className='mt-3'><strong>Total complexity score of file:  </strong>{complexity.complexityScore}</p>
+            </div>
 
           )}
 
-             
+
 
           <div>
             <button
