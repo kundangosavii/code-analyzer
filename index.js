@@ -11,9 +11,15 @@ import { cloneRepo } from "./src/core/repoCloner.js";
 import { saveGraph, saveInsights, saveReadableInsights, saveGraphInNodeAndEdgesFormat, saveCycle, saveComplexity } from "./src/core/saveInsights.js";
 import { transformGraph } from "./src/core/graphTransformation.js";
 import { impactAnalysis } from "./src/core/impactAnalysis.js";
-import { detectCycles, calculateDepth, calculateComplexity   } from "./src/core/dfsAnalysis.js";
+import { detectCycles, calculateDepth, calculateComplexity } from "./src/core/dfsAnalysis.js";
 
-const TARGET_DIR = path.join(__dirname, "test-project");
+const TARGET_DIR = "C:\\web devolapment\\courseMart_project\\courseMart\\backend\\src";
+
+const resolved = path.resolve(TARGET_DIR);
+
+console.log("RAW:", TARGET_DIR);
+console.log("RESOLVED:", resolved);
+console.log("EXISTS:", fs.existsSync(resolved));
 
 function run() {
   // const repoUrl = process.argv[2]
@@ -25,7 +31,7 @@ function run() {
 
   // const repoPath = await cloneRepo(repoUrl);
 
-  console.log("Scanning files...\n");
+  console.log("Scanning files...\n", TARGET_DIR);
 
   const files = getAllFiles(TARGET_DIR);
 
@@ -57,7 +63,7 @@ function run() {
   ReadableInsights.forEach((msg, i) => {
     console.log(`${i + 1}. ${msg}`);
   });
-  
+
   const graphNodesEdges = transformGraph(graph)
 
   const cycle = detectCycles(graph)
@@ -72,6 +78,18 @@ function run() {
   saveComplexity(TARGET_DIR, complexity);
 
   impactAnalysis(TARGET_DIR);
+
+  const date = new Date();
+  const dateString = date.toLocaleString();
+
+  const formattedDate = dateString.split(",")[1].trim();
+
+  const generateUniqeId = () => {
+    return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+  }
+
+  console.log("\nUnique ID for this run:", generateUniqeId());
+  console.log(formattedDate)
 
 }
 
