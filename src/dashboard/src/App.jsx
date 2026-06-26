@@ -10,7 +10,7 @@ export default function App() {
   const [repos, setRepos] = useState([
     { repoId: "repo_2", name: "test-repo" },
     { repoId: "test-project_32126", name: "test-project" },
-    { repoId: "src_103412", name: "src" }
+    { repoId: "src_113849", name: "src"}
   ]);
   const [selectedRepo, setSelectedRepo] = useState(null);
   const [insights, setInsights] = useState([]);
@@ -22,8 +22,8 @@ export default function App() {
   const [complexity, setComplexity] = useState(null)
 
   const handleAnalyze = () => {
-    const repoInput = analyzeRepo()
-    console.log("Analyze:", repoInput);
+    console.log(repoInput)
+    analyzeRepo(repoInput)
   };
 
   const handleSelectRepo = async (repo) => {
