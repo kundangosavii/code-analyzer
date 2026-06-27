@@ -18,10 +18,24 @@ const analyzeController = (req, res) => {
         const formattedDate = dateString.split(",")[1].trim();
 
         const generateUniqeId = () => {
-            return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+            if (TARGET_DIR.includes(".git")){
+                return TARGET_DIR.split('/').pop().replace('.git', '') + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+            }else{
+                return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
+            }
         }
 
-        const repoPath = TARGET_DIR.split(path.sep).pop()
+        let repoPath;
+
+        if(TARGET_DIR.includes(".git")){
+            repoPath = TARGET_DIR.split('/').pop().replace('.git', '');
+        }
+        else{
+            repoPath = TARGET_DIR.split(path.sep).pop();
+        }
+
+        console.log("repoPath:", repoPath);
+
         if (fs.existsSync(`C:/code-analyser/repos/${repoPath}`)) {
             console.log("repo already analyzed")
             fs.readFile(registerPath, 'utf-8', (err, data) => {
@@ -45,8 +59,18 @@ const analyzeController = (req, res) => {
         else {
             run(repoUrl)
             const UniqueId = generateUniqeId();
+            console.log("Generated UniqueId:", UniqueId);
+            let repoName;
+            if(path.basename(TARGET_DIR).includes(".git")){
+                repoName = path.basename(TARGET_DIR).replace('.git', '');
+                console.log("repoName:", repoName);
+            }
+            else{
+                repoName = path.basename(TARGET_DIR);
+                console.log("repoName:", repoName);
+            }
             const newObj = {
-                repoName: path.basename(TARGET_DIR),
+                repoName: repoName,
                 UniqueId,
                 date: formattedDate
             }
