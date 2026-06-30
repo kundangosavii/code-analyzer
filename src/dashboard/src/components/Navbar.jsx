@@ -1,7 +1,7 @@
 import { Bell } from "lucide-react"
 
 
-export default function Navbar() {
+export default function Navbar({repo}) {
     return (
         <>
             <div className="w-full bg-[#080817] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
@@ -15,7 +15,7 @@ export default function Navbar() {
                     </div>
                     <div className="ml-12">
                         <h1 className="text-white font-semibold text-lg">
-                            src
+                            {repo ? repo.name : "No repository selected"}
                         </h1>
                         <div className="flex items-center gap-1">
                             <p className="bg-green-500 h-2 w-2 border rounded-full"></p>
