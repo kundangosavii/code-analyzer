@@ -4,7 +4,7 @@ import { Bell } from "lucide-react"
 export default function Navbar() {
     return (
         <>
-            <div className="w-full bg-[#0d1117] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
+            <div className="w-full bg-[#080817] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
 
                 <div className="flex item-center gap-6 items-center">
                     <div>
@@ -48,7 +48,6 @@ export default function Navbar() {
                         Sync Repo
                     </button>
 
-                    {/* Bell Icon */}
                     <Bell className="text-gray-400 cursor-pointer" size={18} />
                 </div>
             </div>
