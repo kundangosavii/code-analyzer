@@ -6,17 +6,28 @@ export default function Navbar() {
         <>
             <div className="w-full bg-[#0d1117] border-b border-gray-800 px-6 py-3 flex items-center justify-between">
 
-                <div className="flex item-center gap-6">
+                <div className="flex item-center gap-6 items-center">
                     <div>
+                        <h1 className="text-blue-400 font-semibold text-lg">
+                            CodeSync AI
+                        </h1>
+                        <p className="text-xs text-gray-500">Enterprise Tier</p>
+                    </div>
+                    <div className="ml-12">
                         <h1 className="text-white font-semibold text-lg">
                             src
                         </h1>
-                        <p className="text-gray-400 text-sm">
+                        <div className="flex items-center gap-1">
+                            <p className="bg-green-500 h-2 w-2 border rounded-full"></p>
+                            <p className="text-gray-400 text-sm">
                             Analyzed 2m ago
-                        </p>
+                            </p>    
+                        </div>
                     </div>
 
-                    <div className="flex gap-5 ml-6">
+                </div>
+
+                <div className="flex gap-5">
                         {["Overview", "Commits", "PRs", "Actions"].map((tab, i) => (
                             <button
                                 key={i}
@@ -25,7 +36,6 @@ export default function Navbar() {
                                 {tab}
                             </button>
                         ))}
-                    </div>
                 </div>
 
                 <div className="flex items-center gap-4">
