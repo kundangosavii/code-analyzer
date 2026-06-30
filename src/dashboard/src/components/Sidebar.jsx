@@ -25,16 +25,9 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-64 h-screen bg-[#0b1220] text-gray-300 flex flex-col justify-between p-4">
+    <div className="w-64 h-screen bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col justify-between p-4">
 
       <div>
-        <div className="mb-6">
-          <h1 className="text-blue-400 font-semibold text-lg">
-            CodeSync AI
-          </h1>
-          <p className="text-xs text-gray-500">Enterprise Tier</p>
-        </div>
-
         <div className="mb-6">
           <p className="text-xs text-gray-500 mb-2">REPOSITORIES</p>
 
