@@ -50,13 +50,6 @@ export default function Navbar() {
 
                     {/* Bell Icon */}
                     <Bell className="text-gray-400 cursor-pointer" size={18} />
-
-                    {/* Avatar */}
-                    <img
-                        src="https://i.pravatar.cc/30"
-                        alt="profile"
-                        className="w-8 h-8 rounded-full cursor-pointer"
-                    />
                 </div>
             </div>
         </>
