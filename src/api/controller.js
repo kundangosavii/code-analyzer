@@ -72,7 +72,8 @@ const analyzeController = (req, res) => {
             const newObj = {
                 repoName: repoName,
                 UniqueId,
-                date: formattedDate
+                date: formattedDate,
+                analyzedAt: new Date().toISOString()
             }
 
             let data = [];
@@ -101,6 +102,38 @@ const analyzeController = (req, res) => {
         console.error('Error during code analysis:', error);
         res.status(500).json({ message: 'An error occurred during code analysis.' });
     }
+}
+
+const getAnalysisTimingController = (req, res, repoId) => {
+    try {
+        const repoId = req.query.repoId;
+
+        const repoName = repoId.split("_").slice(0, -1).join("_");
+
+        fs.readFile(`C:/code-analyser/repos/register.json`, 'utf-8', (err, data) => {
+            if (err) {
+                console.error('Error reading register file:', err);
+                return res.status(500).json({ message: 'An error occurred while fetching analysis timing.' });
+            }
+
+            const registerData = JSON.parse(data);
+            const repoData = registerData.find(item => item.UniqueId === repoId);
+
+            if (!repoData) {
+                return res.status(404).json({ message: 'Repository not found in register.' });
+            }
+
+            res.status(200).json({
+                analyzedAt: repoData.analyzedAt
+            });
+        });
+
+    }
+    catch {
+        console.error('Error fetching analysis timing:', error);
+        res.status(500).json({ message: 'An error occurred while fetching analysis timing.' });
+    }
+
 }
 
 const getInsightsController = (req, res, repoId) => {
@@ -341,5 +374,6 @@ export {
     getDeadCodeController,
     getComplexityController,
     getAIInsightsController,
-    getReposController
+    getReposController,
+    getAnalysisTimingController
 }

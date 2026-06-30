@@ -9,7 +9,8 @@ import {
     getDeadCodeController,
     getComplexityController,
     getAIInsightsController,
-    getReposController
+    getReposController,
+    getAnalysisTimingController
 } from './controller.js'
 
 const router = Router()
@@ -24,5 +25,6 @@ router.get('/dead-code', getDeadCodeController)
 router.get('/complexity', getComplexityController)
 router.get('/ai-insights', getAIInsightsController)
 router.get('/repos', getReposController)
+router.get('/analysis-timing', getAnalysisTimingController)
 
 export default router;
