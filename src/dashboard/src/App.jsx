@@ -38,6 +38,13 @@ export default function App() {
   };
 
   const handleSelectRepo = async (repo) => {
+    setRepos(
+    repos.map((r) =>
+      r.repoId === repo.repoId 
+        ? { ...r, active: true } 
+        : { ...r, active: false }
+    )
+  );
     setSelectedRepo(repo);
     console.log(repo.repoId)
     const insights = await getInsights(repo.repoId)
@@ -240,7 +247,7 @@ export default function App() {
       </div>
 
       <div className=''>
-        <Sidebar />
+        <Sidebar repos={repos} onRepoClick={handleSelectRepo} />
       </div>
     </div>
   )

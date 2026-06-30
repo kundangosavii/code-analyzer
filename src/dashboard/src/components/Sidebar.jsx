@@ -10,13 +10,7 @@ import {
 
 import { useState } from "react";
 
-export default function Sidebar() {
-  const [repos, setRepos] = useState([
-    { name: "api-service", active: true },
-    { name: "auth-module", active: false },
-    { name: "frontend-ui", active: false },
-    { name: "data-pipeline", active: false },
-  ])
+export default function Sidebar({ repos, onRepoClick }) {
 
   const menuItems = [
     { icon: Folder, label: "Repositories" },
@@ -33,25 +27,20 @@ export default function Sidebar() {
         <div className="mb-6">
           <p className="text-xs text-gray-500 mb-2">REPOSITORIES</p>
 
-            <div className="flex flex-col gap-2">
-              {repos.map((repo, i) => (
-                <div
-                  key={i}
-                  onClick={()=>{
-                    setRepos(repos.map((r, index) => {
-                      return index === i ? {...r, active: !r.active} : { ...r, active: false }
-                    }))
-                  }}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer ${
-                    repo.active
-                      ? "bg-gray-700 text-white"
-                      : "hover:bg-gray-800"
+          <div className="flex flex-col gap-2">
+            {repos.map((repo) => (
+              <div
+                key={repo.repoId}
+                onClick={() => onRepoClick(repo)}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors ${repo.active
+                    ? "bg-gray-700 text-white"
+                    : "hover:bg-gray-800 text-gray-300"
                   }`}
-                >
-                  {repo.active && <Lock size={14} />}
-                  <span className="text-sm">{repo.name}</span>
-                </div>
-              ))}
+              >
+                {repo.active && <Lock size={14} />}
+                <span className="text-sm">{repo.name}</span>
+              </div>
+            ))}
           </div>
         </div>
 
