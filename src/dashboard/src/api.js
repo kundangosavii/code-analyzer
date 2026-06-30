@@ -21,6 +21,16 @@ export async function analyzeRepo(repoUrl) {
     return handleRespone(response);
 }
 
+export async function getAnalysisTiming(repoId) {
+    const res = await fetch(`${Base_URL}/analysis-timing?repoId=${repoId}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    return handleRespone(res);
+}
+
 export async function getInsights(repoId) {
   const res = await fetch(`${Base_URL}/readable-insights?repoId=${repoId}`,{
     method: 'GET',
