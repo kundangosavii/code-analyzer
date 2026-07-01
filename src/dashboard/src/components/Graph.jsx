@@ -15,7 +15,9 @@ export default function Graph({ graphData, onNodeClick }) {
         {
           selector: "node",
           style: {
-            label: "data(label)"
+            label: "data(label)",
+            backgroundColor : "#8b0000",
+            color: "white"
           }
         },
 
@@ -67,5 +69,5 @@ export default function Graph({ graphData, onNodeClick }) {
     return () => cy.destroy(); // cleanup
   }, [graphData]);
 
-  return <div ref={cyRef} className="w-full h-125 border" />;
+  return <div ref={cyRef} className="w-full border border-gray-800 bg-[#171731]" />;
 }
