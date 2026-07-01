@@ -259,7 +259,7 @@ export default function App() {
           <Graph graphData={graphData} onNodeClick={handleNodeClick} />
 
         <div>
-          <Analysisbar repos={repos} onRepoClick={handleSelectRepo} />
+          <Analysisbar insights={insights}/>
         </div>
       </div>
     </div>
