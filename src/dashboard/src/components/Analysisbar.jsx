@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-export default function Analysisbar({ insights, impact, deadCode }) {
-    console.log(`deadcode : ${deadCode}`)
+export default function Analysisbar({ insights, impact, deadCode, complexity }) {
+    console.log(complexity)
     return (
         <div className="w-96 h-[90vh] bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col p-4 overflow-hidden">
 
@@ -73,10 +73,9 @@ export default function Analysisbar({ insights, impact, deadCode }) {
                         </div>
                     </div>
 
-                    {/* Inside your Dead Code card container */}
                     <div className="mt-4 flex flex-col gap-2">
                         {deadCode && deadCode.length > 0 ? (
-                            deadCode.slice(0,2).map((item, index) => (
+                            deadCode.slice(0, 2).map((item, index) => (
                                 <p key={index} className="text-sm text-gray-300 wrap-break-word">
                                     {item}
                                 </p>
@@ -89,12 +88,30 @@ export default function Analysisbar({ insights, impact, deadCode }) {
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">
                     <p className="text-xl font-bold text-red-400 mt-2">COMPLEXITY</p>
-                    <p className="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam explicabo maxime. Velit eius adipisci beatae. Unde, voluptates adipisci consectetur sequi, animi quisquam aliquid ea sapiente doloribus porro quam facere?</p>
-                </div>
+                    <div className="mt-4 flex flex-col gap-2">
+                        {complexity ? (
+                            <div>
+                                <p className="text-sm text-gray-300 break-all">
+                                    <span className="font-semibold text-gray-400">File:</span> {complexity.file}
+                                </p>
+                                <p className="text-sm text-gray-300 break-all">
+                                    <span className="font-semibold text-gray-400">ImportedBy:</span> {typeof complexity.importedBy === 'object' ? JSON.stringify(complexity.importedBy) : String(complexity.importedBy)}
+                                </p>
+                                <p className="text-sm text-gray-300 break-all">
+                                    <span className="font-semibold text-gray-400">Imports:</span> {typeof complexity.imports === 'object' ? JSON.stringify(complexity.imports) : String(complexity.imports)}
+                                </p>
+                                <p className="text-sm text-gray-300">
+                                    <span className="font-semibold text-gray-400">InCycle:</span> {String(complexity.inCycle)}
+                                </p>
+                                <p className="text-sm text-gray-300">
+                                    <span className="font-semibold text-gray-400">Complexity Score:</span> {complexity.complexityScore}
+                                </p>
+                            </div>
 
-                <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">
-                    <p className="text-xl font-bold text-red-400 mt-2">DEAD CODE</p>
-                    <p className="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam explicabo maxime. Velit eius adipisci beatae. Unde, voluptates adipisci consectetur sequi, animi quisquam aliquid ea sapiente doloribus porro quam facere?</p>
+                        ) : (
+                            <p className="text-sm text-gray-500 italic"> No complexity code found or loading...</p>
+                        )}
+                    </div>
                 </div>
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">

@@ -76,16 +76,6 @@ export default function App() {
     }
   };
 
-  // const handleDeadCode = async () => {
-  //   try {
-  //     const repo = selectedRepo
-  //     const deadCode = await getDeadCode(repo.repoId)
-  //     setDeadCode(deadCode)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
   const handleAiInsights = async () => {
     try {
       const repo = selectedRepo
@@ -261,7 +251,7 @@ export default function App() {
           <Graph graphData={graphData} onNodeClick={handleNodeClick} />
 
         <div>
-          <Analysisbar insights={insights} impact={impact} deadCode={deadCode}/>
+          <Analysisbar insights={insights} impact={impact} deadCode={deadCode} complexity={complexity}/>
         </div>
       </div>
     </div>
