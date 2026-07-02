@@ -65,6 +65,7 @@ export default function App() {
     try {
       const repo = selectedRepo
       const impact = await getImpact(repo.repoId, filePath);
+      console.log(impact)
       setImpact(impact);
       const complexity = await getComplexity(repo.repoId, filePath)
       setComplexity(complexity)
@@ -246,7 +247,6 @@ export default function App() {
 
   return (
     <div className="h-screen bg-[#0a0a1a] overflow-hidden">
-      {/* Navbar */}
       <div className="">
         <Navbar repo={selectedRepo} analysisTime={timing}/>
       </div>
@@ -259,7 +259,7 @@ export default function App() {
           <Graph graphData={graphData} onNodeClick={handleNodeClick} />
 
         <div>
-          <Analysisbar insights={insights}/>
+          <Analysisbar insights={insights} impact={impact} deadCode={deadCode}/>
         </div>
       </div>
     </div>
