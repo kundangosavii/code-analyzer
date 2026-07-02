@@ -12,8 +12,10 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-export default function Analysisbar({ insights }) {
+export default function Analysisbar({ insights, impact, deadCode }) {
     console.log(insights)
+    console.log(impact)
+    console.log(`deadcode : ${deadCode}`)
     return (
         <div className="w-96 h-[90vh] bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col p-4 overflow-hidden">
 
@@ -21,7 +23,7 @@ export default function Analysisbar({ insights }) {
 
             <div className="flex-1 overflow-y-auto pr-2 no-scrollbar">
 
-                <div className="h-56 border-2 border-gray-900 rounded mt-4 p-3">
+                <div className="h-64 border-2 border-gray-900 rounded mt-4 p-3">
                     <div className="flex flex-row  items-center justify-between">
                         <div className="px-2 py-2 text-xs font-bold tracking-wider uppercase border rounded-xl bg-[#bdffab0d] border-[#bdffab33] text-[#b2ffab]">
                             <SearchCode className="text-[#b2ffab] cursor-pointer" size={18} />
@@ -33,7 +35,7 @@ export default function Analysisbar({ insights }) {
 
                     <div className="mt-4 flex flex-col gap-3">
                         {insights.slice(0, 2).map((insight, i) => (
-                            <p key={i} className="text-sm leading-relaxed text-gray-300">
+                            <p key={i} className="text-sm leading-relaxed text-gray-300 wrap-break-word">
                                 {insight}
                             </p>
                         ))}
@@ -50,13 +52,17 @@ export default function Analysisbar({ insights }) {
                         </div>
                     </div>
 
-                    <div className="mt-4 flex flex-col gap-3">
-                        {insights.slice(0, 2).map((insight, i) => (
-                            <p key={i} className="text-sm leading-relaxed text-gray-300">
-                                {insight}
-                            </p>
-                        ))}
-                    </div>
+                    {impact.map((item, index) => (
+                        <div key={index} className="p-3">
+                            {Object.entries(item).map(([key, value]) => (
+                                <p key={key} className="text-sm text-gray-300 wrap-break-word">
+                                    <span className="font-semibold uppercase text-gray-450">{key}: </span>
+                                    {typeof value === 'object' ? JSON.stringify(value) : String(value)}
+                                </p>
+                            ))}
+                        </div>
+                    ))}
+
                 </div>
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-4 p-3">
@@ -69,7 +75,15 @@ export default function Analysisbar({ insights }) {
                         </div>
                     </div>
 
-                    <p className="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam explicabo maxime. Velit eius adipisci beatae. Unde, voluptates adipisci consectetur sequi, animi quisquam aliquid ea sapiente doloribus porro quam facere?</p>
+                    <div className="mt-4 flex flex-col gap-2">
+                        {
+                            deadCode.map((item, index) => (
+                                <p key={index} className="text-sm text-gray-300 break-all">
+                                    {item}
+                                </p>
+                            ))
+                        }
+                    </div>
                 </div>
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">
