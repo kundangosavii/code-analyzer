@@ -13,8 +13,6 @@ import {
 import { useState } from "react";
 
 export default function Analysisbar({ insights, impact, deadCode }) {
-    console.log(insights)
-    console.log(impact)
     console.log(`deadcode : ${deadCode}`)
     return (
         <div className="w-96 h-[90vh] bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col p-4 overflow-hidden">
@@ -65,7 +63,7 @@ export default function Analysisbar({ insights, impact, deadCode }) {
 
                 </div>
 
-                <div className="h-56 border-2 border-gray-900 rounded mt-4 p-3">
+                <div className="h-64 border-2 border-gray-900 rounded mt-4 p-3">
                     <div className="flex flex-row  items-center justify-between">
                         <div className="px-2 py-2 text-xs font-bold tracking-wider uppercase border rounded-xl bg-[#d1690031] border-[#ffb4ab33] text-[#d16900]">
                             <Trash2 className="text-[#ffb4ab] cursor-pointer" size={18} />
@@ -75,14 +73,17 @@ export default function Analysisbar({ insights, impact, deadCode }) {
                         </div>
                     </div>
 
+                    {/* Inside your Dead Code card container */}
                     <div className="mt-4 flex flex-col gap-2">
-                        {
-                            deadCode.map((item, index) => (
-                                <p key={index} className="text-sm text-gray-300 break-all">
+                        {deadCode && deadCode.length > 0 ? (
+                            deadCode.slice(0,2).map((item, index) => (
+                                <p key={index} className="text-sm text-gray-300 wrap-break-word">
                                     {item}
                                 </p>
                             ))
-                        }
+                        ) : (
+                            <p className="text-sm text-gray-500 italic">No dead code found or loading...</p>
+                        )}
                     </div>
                 </div>
 
