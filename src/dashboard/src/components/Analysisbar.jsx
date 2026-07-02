@@ -8,7 +8,8 @@ import {
     Lock,
     MessageCircleWarning,
     Trash2,
-    SearchCode
+    SearchCode,
+    Gauge
 } from "lucide-react";
 import { useState } from "react";
 
@@ -87,7 +88,26 @@ export default function Analysisbar({ insights, impact, deadCode, complexity }) 
                 </div>
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">
-                    <p className="text-xl font-bold text-red-400 mt-2">COMPLEXITY</p>
+                    <div className="flex flex-row  items-center justify-between">
+                        <div className="px-2 py-2 text-xs font-bold tracking-wider uppercase border rounded-xl bg-[#0099d11e] border-[#abd2ff33] text-[#0070d1]">
+                            <Gauge className="text-[#abb6ff] cursor-pointer" size={18} />
+                        </div>
+                        <p className="text-xl font-bold text-gray-400">
+                            {complexity ? (
+                                <div>
+                                    <span className="text-green-700 text-3xl">{complexity.complexityScore}</span>
+                                    <span className="text-2xl">/100</span>
+                                </div>
+
+                            ) : (
+                               <p className="text-sm text-gray-500"> 
+                               <span className="text-green-700 text-3xl">0</span>
+                               <span className="text-2xl">/100</span>
+                               </p> 
+                            )}
+                        </p>
+                        
+                    </div>
                     <div className="mt-4 flex flex-col gap-2">
                         {complexity ? (
                             <div>
