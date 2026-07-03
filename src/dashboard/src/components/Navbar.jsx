@@ -14,7 +14,7 @@ export default function Navbar({repo, analysisTime}) {
                         <h1 className="text-blue-400 font-semibold text-lg">
                             CodeSync AI
                         </h1>
-                        <p className="text-xs text-gray-500">Enterprise Tier</p>
+                        <p className="text-xs text-gray-500">Visualize and Analyze</p>
                     </div>
                     <div className="ml-12">
                         <h1 className="text-white font-semibold text-lg">
