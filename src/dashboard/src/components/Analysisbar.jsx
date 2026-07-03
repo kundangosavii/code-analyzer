@@ -9,12 +9,12 @@ import {
     MessageCircleWarning,
     Trash2,
     SearchCode,
-    Gauge
+    Gauge,
+    BrainCircuit
 } from "lucide-react";
 import { useState } from "react";
 
-export default function Analysisbar({ insights, impact, deadCode, complexity }) {
-    console.log(complexity)
+export default function Analysisbar({ insights, impact, deadCode, complexity, aiInsights, aiInsightLoading, onGetAiInsights }) {
     return (
         <div className="w-96 h-[90vh] bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col p-4 overflow-hidden">
 
@@ -100,17 +100,20 @@ export default function Analysisbar({ insights, impact, deadCode, complexity }) 
                                 </div>
 
                             ) : (
-                               <p className="text-sm text-gray-500"> 
-                               <span className="text-green-700 text-3xl">0</span>
-                               <span className="text-2xl">/100</span>
-                               </p> 
+                                <p className="text-sm text-gray-500">
+                                    <span className="text-green-700 text-3xl">0</span>
+                                    <span className="text-2xl">/100</span>
+                                </p>
                             )}
                         </p>
-                        
+
                     </div>
                     <div className="mt-4 flex flex-col gap-2">
                         {complexity ? (
                             <div>
+                                <p className="text-sm text-gray-300">
+                                    <span className="font-semibold text-white text-xl">Complexity Score:</span><span className="font-bold text-xl text-green-700">{complexity.complexityScore}</span>
+                                </p>
                                 <p className="text-sm text-gray-300 break-all">
                                     <span className="font-semibold text-gray-400">File:</span> {complexity.file}
                                 </p>
@@ -123,9 +126,6 @@ export default function Analysisbar({ insights, impact, deadCode, complexity }) 
                                 <p className="text-sm text-gray-300">
                                     <span className="font-semibold text-gray-400">InCycle:</span> {String(complexity.inCycle)}
                                 </p>
-                                <p className="text-sm text-gray-300">
-                                    <span className="font-semibold text-gray-400">Complexity Score:</span> {complexity.complexityScore}
-                                </p>
                             </div>
 
                         ) : (
@@ -135,8 +135,39 @@ export default function Analysisbar({ insights, impact, deadCode, complexity }) 
                 </div>
 
                 <div className="h-56 border-2 border-gray-900 rounded mt-6 p-3">
-                    <p className="text-xl font-bold text-red-400 mt-2">AI INSIGHTS</p>
-                    <p className="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam explicabo maxime. Velit eius adipisci beatae. Unde, voluptates adipisci consectetur sequi, animi quisquam aliquid ea sapiente doloribus porro quam facere?</p>
+                    <div className="flex flex-row  items-center justify-between">
+                        <div className="px-2 py-2 text-xs font-bold tracking-wider uppercase border rounded-xl bg-[#ffabf022] border-[#ffabfb33] text-[#b2ffab]">
+                            <BrainCircuit className="text-[#ffabe4] cursor-pointer" size={18} />
+                        </div>
+                        <button className="px-4 py-1.5 text-xs font-bold tracking-wider uppercase border rounded-sm bg-[#ffabf022] border-[#ffabfb33] text-[#ffabe4]"
+                            onClick={onGetAiInsights}
+                            disable={aiInsightLoading}
+                        >
+                            {
+                                aiInsightLoading ? (
+                                    <>
+                                        <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-[#ffabe4] border-t-transparent">
+                                            Loading
+                                        </span>
+                                    </>
+                                ) : (
+                                    "Get AI-Insights"
+                                )
+                            }
+                        </button>
+                    </div>
+                    <div className="mt-4 flex flex-col gap-2">
+                        {aiInsightLoading ? (
+                            <p className="text-sm text-gray-400">Generating AI insight...</p>
+                        ) : aiInsights ? (
+                            <button className="w-full text-left rounded-xl border border-[#ffabfb33] bg-[#ffabf00f] p-3 text-sm text-[#ffabe4] hover:bg-[#ffabf018] transition">
+                                Your insights are ready, click to review
+                            </button>
+                        ) : (
+                            <p className="text-sm text-gray-500 italic">Click the button to generate AI insights.</p>
+                        )}
+                    </div>
+
                 </div>
 
             </div>
