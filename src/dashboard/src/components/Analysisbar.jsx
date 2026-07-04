@@ -202,7 +202,7 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                                 {showAnalysisCard && (
                                     <div className="fixed inset-0 z-50 bg-black/70">
                                         <div className="flex h-full w-full items-center justify-center p-4">
-                                            <div className="relative h-[90vh] w-[90vw] max-w-6xl rounded-2xl border border-[#ffabfb33] bg-[#080817]/90 p-6 shadow-2xl backdrop-blur-md overflow-auto no-scrollbar">
+                                            <div className="relative h-[90vh] w-[90vw] max-w-6xl rounded-2xl border border-[#bfabff33] bg-[#080817]/90 p-6 shadow-2xl backdrop-blur-md overflow-auto no-scrollbar">
                                                 <button
                                                     onClick={() => setShowAnalysisCard(false)}
                                                     className="absolute right-4 top-4 rounded-md border border-gray-700 px-3 py-1 text-sm text-gray-300 hover:bg-white/10"
