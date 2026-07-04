@@ -38,15 +38,21 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                     </div>
 
                     <div className="mt-4 flex flex-col gap-3">
-                        {insights.slice(0, 2).map((insight, i) => (
+                        { insights && insights.length != 0 ? (
+                            insights.slice(0, 2).map((insight, i) => (
                             <p key={i} className="text-sm leading-relaxed text-gray-300 wrap-break-word">
                                 {insight}
                             </p>
-                        ))}
+                            ))
+
+                        ) : (
+                            <p className="text-sm italic text-gray-500">Please select the repository to get insights</p>
+
+                        ) }
                     </div>
                 </div>
 
-                <div className="h-56 border-2 border-gray-900 rounded mt-4 p-3">
+                <div className="h-64 border-2 border-gray-900 rounded mt-4 p-3">
                     <div className="flex flex-row  items-center justify-between">
                         <div className="px-2 py-2 text-xs font-bold tracking-wider uppercase border rounded-xl bg-[#ffb3ab31] border-[#ffb4ab33] text-[#ffb4ab]">
                             <MessageCircleWarning className="text-[#ffb4ab] cursor-pointer" size={18} />
@@ -56,17 +62,31 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                         </div>
                     </div>
 
-                    {impact.map((item, index) => (
-                        <div key={index} className="p-3">
-                            {Object.entries(item).map(([key, value]) => (
-                                <p key={key} className="text-sm text-gray-300 wrap-break-word">
-                                    <span className="font-semibold uppercase text-gray-450">{key}: </span>
-                                    {typeof value === 'object' ? JSON.stringify(value) : String(value)}
-                                </p>
-                            ))}
-                        </div>
-                    ))}
 
+                    <div className="mt-4 flex flex-col wrap-break-word">
+                        {impact && impact.length != 0 ? (
+                            impact.map((item, index) => (
+                                <div key={index} className="p-3">
+                                    <p className="text-sm text-gray-300">
+                                        <span className="font-semibold text-gray-200">File:</span> {item.file}
+                                    </p>
+                                    <p className="text-sm text-gray-300">
+                                        <span className="font-semibold text-gray-200">Direct:</span> {item.direct || "None"}
+                                    </p>
+                                    <p className="text-sm text-gray-300">
+                                        <span className="font-semibold text-gray-200">Indirect:</span> {item.indirect || "None"}
+                                    </p>
+                                    <p className="text-sm text-gray-300">
+                                        <span className="font-semibold text-gray-200">Total impacted:</span> {item.totalImpactedFiles}
+                                    </p>
+                                </div>
+                            ))
+
+                        ) : (
+                            <p className="text-sm italic text-gray-500">Please select the file to get impact analysis of file</p>
+                        )}
+
+                    </div>
                 </div>
 
                 <div className="h-64 border-2 border-gray-900 rounded mt-4 p-3">
@@ -87,7 +107,7 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                                 </p>
                             ))
                         ) : (
-                            <p className="text-sm text-gray-500 italic">No dead code found or loading...</p>
+                            <p className="text-sm text-gray-500 italic">Please select the repository to get insights</p>
                         )}
                     </div>
                 </div>
@@ -134,7 +154,7 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                             </div>
 
                         ) : (
-                            <p className="text-sm text-gray-500 italic"> No complexity code found or loading...</p>
+                            <p className="text-sm text-gray-500 italic"> Please select the file to get complexity score</p>
                         )}
                     </div>
                 </div>
@@ -173,22 +193,22 @@ export default function Analysisbar({ insights, impact, deadCode, complexity, ai
                                     Your insights are ready, click to review
                                 </button>
 
-                                 {showAnalysisCard && (
-                            <div className="fixed inset-0 z-50 bg-black/70">
-                                <div className="flex h-full w-full items-center justify-center p-4">
-                                    <div className="relative h-[90vh] w-[90vw] max-w-6xl rounded-2xl border border-[#ffabfb33] bg-[#080817]/90 p-6 shadow-2xl backdrop-blur-md overflow-auto no-scrollbar">
-                                        <button
-                                            onClick={() => setShowAnalysisCard(false)}
-                                            className="absolute right-4 top-4 rounded-md border border-gray-700 px-3 py-1 text-sm text-gray-300 hover:bg-white/10"
-                                        >
-                                            Close
-                                        </button>
+                                {showAnalysisCard && (
+                                    <div className="fixed inset-0 z-50 bg-black/70">
+                                        <div className="flex h-full w-full items-center justify-center p-4">
+                                            <div className="relative h-[90vh] w-[90vw] max-w-6xl rounded-2xl border border-[#ffabfb33] bg-[#080817]/90 p-6 shadow-2xl backdrop-blur-md overflow-auto no-scrollbar">
+                                                <button
+                                                    onClick={() => setShowAnalysisCard(false)}
+                                                    className="absolute right-4 top-4 rounded-md border border-gray-700 px-3 py-1 text-sm text-gray-300 hover:bg-white/10"
+                                                >
+                                                    Close
+                                                </button>
 
-                                        <AnalysisCard aiInsights={aiInsights} />
+                                                <AnalysisCard aiInsights={aiInsights} />
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        )}
+                                )}
                             </>
                         ) : (
                             <p className="text-sm text-gray-500 italic">Click the button to generate AI insights.</p>
