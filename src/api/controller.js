@@ -18,19 +18,19 @@ const analyzeController = (req, res) => {
         const formattedDate = dateString.split(",")[1].trim();
 
         const generateUniqeId = () => {
-            if (TARGET_DIR.includes(".git")){
+            if (TARGET_DIR.includes(".git")) {
                 return TARGET_DIR.split('/').pop().replace('.git', '') + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
-            }else{
+            } else {
                 return TARGET_DIR.split(path.sep).pop() + "_" + formattedDate.replace(/[:\s]/g, "").replace('pm', "");
             }
         }
 
         let repoPath;
 
-        if(TARGET_DIR.includes(".git")){
+        if (TARGET_DIR.includes(".git")) {
             repoPath = TARGET_DIR.split('/').pop().replace('.git', '');
         }
-        else{
+        else {
             repoPath = TARGET_DIR.split(path.sep).pop();
         }
 
@@ -61,11 +61,11 @@ const analyzeController = (req, res) => {
             const UniqueId = generateUniqeId();
             console.log("Generated UniqueId:", UniqueId);
             let repoName;
-            if(path.basename(TARGET_DIR).includes(".git")){
+            if (path.basename(TARGET_DIR).includes(".git")) {
                 repoName = path.basename(TARGET_DIR).replace('.git', '');
                 console.log("repoName:", repoName);
             }
-            else{
+            else {
                 repoName = path.basename(TARGET_DIR);
                 console.log("repoName:", repoName);
             }
@@ -305,38 +305,47 @@ const getAIInsightsController = async (req, res) => {
 
         const repoName = repoId.split("_").slice(0, -1).join("_");
 
-        const insightsContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/insights.json`, 'utf8');
-        const insightsData = JSON.parse(insightsContent);
-        const deadcode = insightsData.UnusedFiles
+        if (fs.existsSync(`C:/code-analyser/repos/${repoName}/aiInsights.json`)) {
+            const insightsContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/aiInsights.json`, 'utf8');
+            const insightsData = JSON.parse(insightsContent);
+
+            return res.status(200).json({
+                success: true,
+                insights: insightsData
+            });
+        }
+        else {
+            const insightsContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/insights.json`, 'utf8');
+            const insightsData = JSON.parse(insightsContent);
+            const deadcode = insightsData.UnusedFiles
 
 
-        const cyclesContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/cycle.json`, 'utf8');
-        const cycles = JSON.parse(cyclesContent);
+            const cyclesContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/cycle.json`, 'utf8');
+            const cycles = JSON.parse(cyclesContent);
 
-        const complexityContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/complexity.json`, 'utf8');
-        const complexity = JSON.parse(complexityContent);
+            const complexityContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/complexity.json`, 'utf8');
+            const complexity = JSON.parse(complexityContent);
 
-        const impactContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/impactAnalysis.json`, 'utf8');
-        const impact = JSON.parse(impactContent);
+            const impactContent = fs.readFileSync(`C:/code-analyser/repos/${repoName}/impactAnalysis.json`, 'utf8');
+            const impact = JSON.parse(impactContent);
 
-        const analysisData = {
-            deadcode,
-            cycles,
-            complexity,
-            impact
-        };
+            const analysisData = {
+                deadcode,
+                cycles,
+                complexity,
+                impact
+            };
 
-        const data = await llmService(analysisData);
+            const data = await llmService(analysisData);
 
-        console.log(typeof data)
-
-        fs.writeFileSync(`C:/code-analyser/repos/${repoName}/aiInsights.json`, JSON.stringify(data, null, 2), 'utf8');
+            fs.writeFileSync(`C:/code-analyser/repos/${repoName}/aiInsights.json`, JSON.stringify(data, null, 2), 'utf8');
 
 
-        res.status(200).json({
-            success: true,
-            insights: data
-        })
+            res.status(200).json({
+                success: true,
+                insights: data
+            })
+        }
 
     } catch (error) {
         console.error('Error fetching AI insights:', error);
