@@ -18,19 +18,6 @@ import { detectCycles, calculateDepth, calculateComplexity } from "./src/core/df
 async function run(repoUrl) {
   const TARGET_DIR = process.argv[2] || repoUrl;
   const resolved = path.resolve(TARGET_DIR);
-  
-  // console.log("RAW:", TARGET_DIR);
-  // console.log("RESOLVED:", resolved);
-  // console.log("EXISTS:", fs.existsSync(resolved));
-  // const repoUrl = process.argv[2]
-
-  // if(!repoUrl) {
-  //   console.error("Please provide a repository URL as an argument.");
-  // }
-
-  // console.log("Cloned repository path:", repoPath);
-
-  // console.log("Scanning files...\n", repoPath);
 
   let repoPath;
 
