@@ -3,7 +3,7 @@ import path from 'path';
 
 const SUPPORTED_EXTENSIONS = ['.js', '.ts', '.jsx', '.tsx', '.json'];
 
-const IGNORED_DIRS = ["node_modules", ".git", "dist", "build", ".next",".gitignore", "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "package.json", "tsconfig.json", ".eslintrc.js", ".prettierrc", ".babelrc", ".env", ".env.local", ".env.development", ".env.test", ".env.production"];
+const IGNORED_DIRS = ["node_modules", ".git", "dist", "build", ".next",".gitignore", "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "package.json", "tsconfig.json", ".eslintrc.js", ".prettierrc", ".babelrc", ".env", ".env.local", ".env.development", ".env.test", ".env.production","docs", "test_project", "repos"];
 
 export function getAllFiles(dirPath, arrayOfFiles = []) {
     const files = fs.readdirSync(dirPath);
