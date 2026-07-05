@@ -7,7 +7,6 @@ function transformGraph(graphJson){
         const result = file.split("\\")
         const label=result.pop()
         const type=result.pop()
-        console.log(label, type)
         nodes.push(
             {
                 data: {
