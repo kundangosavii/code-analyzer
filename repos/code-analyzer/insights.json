@@ -1,0 +1,79 @@
+{
+  "EntryPoints": [
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+      "imports": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\main.jsx",
+      "imports": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\app.js",
+      "imports": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js"
+      ]
+    }
+  ],
+  "UnusedFiles": [
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\eslint.config.js",
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\vite.config.js",
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\high.Controller.js"
+  ],
+  "HighlyCoupledFiles": [
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+    "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+  ],
+  "CentralFiles": [
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js",
+      "usedBy": 5,
+      "importedBy": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js",
+      "usedBy": 2,
+      "importedBy": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js",
+      "usedBy": 3,
+      "importedBy": [
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+        "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js"
+      ]
+    }
+  ]
+}

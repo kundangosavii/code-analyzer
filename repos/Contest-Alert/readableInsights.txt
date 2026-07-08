@@ -1,0 +1,2 @@
+Start from "C:\code-analyser\cloneRepos\Contest-Alert\Backend\controller.js" — likely an entry point.
+Start from "C:\code-analyser\cloneRepos\Contest-Alert\Backend\server.js" — likely an entry point.

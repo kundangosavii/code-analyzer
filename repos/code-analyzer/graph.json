@@ -1,0 +1,280 @@
+{
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileLoader.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphBuilder.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\insightEngine.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\outputEngine.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphTransformation.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\hfService.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\hfService.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\promptBuilder.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\promptBuilder.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\detectLanguage.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileLoader.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\detectLanguage.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphBuilder.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphTransformation.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\insightEngine.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\outputEngine.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\eslint.config.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Graph.jsx",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Markdown.jsx",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\AnalysisCard.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\AnalysisCard.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Graph.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Markdown.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\timeAgo.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\timeAgo.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\main.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\vite.config.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\app.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\high.Controller.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\app.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js"
+    ]
+  }
+}

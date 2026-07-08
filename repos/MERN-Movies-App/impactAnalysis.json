@@ -1,0 +1,408 @@
+[
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\config\\db.js",
+    "label": "db.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\genreController.js",
+    "label": "genreController.js",
+    "direct": "genreRoutes.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\movieController.js",
+    "label": "movieController.js",
+    "direct": "moviesRoutes.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js",
+    "label": "userController.js",
+    "direct": "userRoutes.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js",
+    "label": "index.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\asyncHandler.js",
+    "label": "asyncHandler.js",
+    "direct": "genreController.js, userController.js, authMiddleware.js",
+    "indirect": "genreRoutes.js, index.js, userRoutes.js, moviesRoutes.js",
+    "totalImpactedFiles": 7
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js",
+    "label": "authMiddleware.js",
+    "direct": "genreRoutes.js, moviesRoutes.js, userRoutes.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\checkId.js",
+    "label": "checkId.js",
+    "direct": "moviesRoutes.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Genre.js",
+    "label": "Genre.js",
+    "direct": "genreController.js",
+    "indirect": "genreRoutes.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Movie.js",
+    "label": "Movie.js",
+    "direct": "movieController.js",
+    "indirect": "moviesRoutes.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\User.js",
+    "label": "User.js",
+    "direct": "userController.js, authMiddleware.js",
+    "indirect": "userRoutes.js, index.js, genreRoutes.js, moviesRoutes.js",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\genreRoutes.js",
+    "label": "genreRoutes.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js",
+    "label": "moviesRoutes.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\uploadRoutes.js",
+    "label": "uploadRoutes.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\userRoutes.js",
+    "label": "userRoutes.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\utils\\createToken.js",
+    "label": "createToken.js",
+    "direct": "userController.js",
+    "indirect": "userRoutes.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\postcss.config.js",
+    "label": "postcss.config.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\App.jsx",
+    "label": "App.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\GenreForm.jsx",
+    "label": "GenreForm.jsx",
+    "direct": "GenreList.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Loader.jsx",
+    "label": "Loader.jsx",
+    "direct": "Login.jsx, Register.jsx, Profile.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Modal.jsx",
+    "label": "Modal.jsx",
+    "direct": "GenreList.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\SliderUtil.jsx",
+    "label": "SliderUtil.jsx",
+    "direct": "Header.jsx, MoviesContainerPage.jsx",
+    "indirect": "Home.jsx, main.jsx",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx",
+    "label": "main.jsx",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminMoviesList.jsx",
+    "label": "AdminMoviesList.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminRoute.jsx",
+    "label": "AdminRoute.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AllComments.jsx",
+    "label": "AllComments.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\CreateMovie.jsx",
+    "label": "CreateMovie.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\AdminDashboard.jsx",
+    "label": "AdminDashboard.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx",
+    "label": "Main.jsx",
+    "direct": "AdminDashboard.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\PrimaryCard.jsx",
+    "label": "PrimaryCard.jsx",
+    "direct": "RealTimeCard.jsx",
+    "indirect": "Main.jsx, AdminDashboard.jsx, main.jsx",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx",
+    "label": "RealTimeCard.jsx",
+    "direct": "Main.jsx, Main.jsx",
+    "indirect": "AdminDashboard.jsx, main.jsx",
+    "totalImpactedFiles": 4
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\SecondaryCard.jsx",
+    "label": "SecondaryCard.jsx",
+    "direct": "Main.jsx",
+    "indirect": "AdminDashboard.jsx, main.jsx",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\VideoCard.jsx",
+    "label": "VideoCard.jsx",
+    "direct": "Main.jsx",
+    "indirect": "AdminDashboard.jsx, main.jsx",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Sidebar\\Sidebar.jsx",
+    "label": "Sidebar.jsx",
+    "direct": "AdminDashboard.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx",
+    "label": "GenreList.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\UpdateMovie.jsx",
+    "label": "UpdateMovie.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx",
+    "label": "Login.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Navigation.jsx",
+    "label": "Navigation.jsx",
+    "direct": "App.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\PrivateRoute.jsx",
+    "label": "PrivateRoute.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx",
+    "label": "Register.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Home.jsx",
+    "label": "Home.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+    "label": "AllMovies.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\Header.jsx",
+    "label": "Header.jsx",
+    "direct": "Home.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieCard.jsx",
+    "label": "MovieCard.jsx",
+    "direct": "SliderUtil.jsx, AllMovies.jsx",
+    "indirect": "Header.jsx, Home.jsx, main.jsx, MoviesContainerPage.jsx",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieDetails.jsx",
+    "label": "MovieDetails.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx",
+    "label": "MoviesContainerPage.jsx",
+    "direct": "Home.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieTabs.jsx",
+    "label": "MovieTabs.jsx",
+    "direct": "MovieDetails.jsx",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx",
+    "label": "Profile.jsx",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+    "label": "apiSlice.js",
+    "direct": "genre.js, movies.js, users.js, store.js",
+    "indirect": "CreateMovie.jsx, main.jsx, GenreList.jsx, AllMovies.jsx, MoviesContainerPage.jsx, Home.jsx, AdminMoviesList.jsx, AllComments.jsx, Main.jsx, AdminDashboard.jsx, UpdateMovie.jsx, Header.jsx, MovieDetails.jsx, PrimaryCard.jsx, RealTimeCard.jsx, Login.jsx, Navigation.jsx, App.jsx, Register.jsx, Profile.jsx",
+    "totalImpactedFiles": 24
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+    "label": "genre.js",
+    "direct": "CreateMovie.jsx, GenreList.jsx, AllMovies.jsx, MoviesContainerPage.jsx",
+    "indirect": "main.jsx, Home.jsx",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+    "label": "movies.js",
+    "direct": "AdminMoviesList.jsx, AllComments.jsx, CreateMovie.jsx, Main.jsx, UpdateMovie.jsx, AllMovies.jsx, AllMovies.jsx, Header.jsx, MovieDetails.jsx, MoviesContainerPage.jsx",
+    "indirect": "main.jsx, AdminDashboard.jsx, Home.jsx",
+    "totalImpactedFiles": 13
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+    "label": "users.js",
+    "direct": "Main.jsx, PrimaryCard.jsx, RealTimeCard.jsx, Login.jsx, Navigation.jsx, Register.jsx, Profile.jsx",
+    "indirect": "AdminDashboard.jsx, main.jsx, App.jsx",
+    "totalImpactedFiles": 10
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js",
+    "label": "constants.js",
+    "direct": "apiSlice.js, genre.js, movies.js, users.js",
+    "indirect": "CreateMovie.jsx, main.jsx, GenreList.jsx, AllMovies.jsx, MoviesContainerPage.jsx, Home.jsx, AdminMoviesList.jsx, AllComments.jsx, Main.jsx, AdminDashboard.jsx, UpdateMovie.jsx, Header.jsx, MovieDetails.jsx, PrimaryCard.jsx, RealTimeCard.jsx, Login.jsx, Navigation.jsx, App.jsx, Register.jsx, Profile.jsx, store.js",
+    "totalImpactedFiles": 25
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js",
+    "label": "authSlice.js",
+    "direct": "Login.jsx, Navigation.jsx, Register.jsx, Profile.jsx, store.js",
+    "indirect": "main.jsx, App.jsx",
+    "totalImpactedFiles": 7
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\movies\\moviesSlice.js",
+    "label": "moviesSlice.js",
+    "direct": "AllMovies.jsx, store.js",
+    "indirect": "main.jsx",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js",
+    "label": "store.js",
+    "direct": "main.jsx",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\tailwind.config.js",
+    "label": "tailwind.config.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\vite.config.js",
+    "label": "vite.config.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  }
+]

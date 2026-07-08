@@ -1,0 +1,499 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js",
+        "label": "config.js",
+        "type": "code-analyzer"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "label": "index.js",
+        "type": "code-analyzer"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+        "label": "app.js",
+        "type": "api"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "label": "controller.js",
+        "type": "api"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js",
+        "label": "routes.js",
+        "type": "api"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\hfService.js",
+        "label": "hfService.js",
+        "type": "services"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js",
+        "label": "llmService.js",
+        "type": "services"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\promptBuilder.js",
+        "label": "promptBuilder.js",
+        "type": "services"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\detectLanguage.js",
+        "label": "detectLanguage.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js",
+        "label": "dfsAnalysis.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileLoader.js",
+        "label": "fileLoader.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js",
+        "label": "fileParser.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphBuilder.js",
+        "label": "graphBuilder.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphTransformation.js",
+        "label": "graphTransformation.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+        "label": "impactAnalysis.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\insightEngine.js",
+        "label": "insightEngine.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\outputEngine.js",
+        "label": "outputEngine.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js",
+        "label": "repoCloner.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js",
+        "label": "saveInsights.js",
+        "type": "core"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\eslint.config.js",
+        "label": "eslint.config.js",
+        "type": "dashboard"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js",
+        "label": "api.js",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "label": "App.jsx",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx",
+        "label": "Analysisbar.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\AnalysisCard.jsx",
+        "label": "AnalysisCard.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Graph.jsx",
+        "label": "Graph.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx",
+        "label": "InputCard.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Markdown.jsx",
+        "label": "Markdown.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx",
+        "label": "Navbar.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx",
+        "label": "Sidebar.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\timeAgo.jsx",
+        "label": "timeAgo.jsx",
+        "type": "components"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\main.jsx",
+        "label": "main.jsx",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\vite.config.js",
+        "label": "vite.config.js",
+        "type": "dashboard"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\app.js",
+        "label": "app.js",
+        "type": "test-project"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\high.Controller.js",
+        "label": "high.Controller.js",
+        "type": "controllers"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+        "label": "userController.js",
+        "type": "controllers"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js",
+        "label": "userService.js",
+        "type": "services"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js",
+        "label": "helper.js",
+        "type": "utils"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileLoader.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphBuilder.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\insightEngine.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\outputEngine.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\graphTransformation.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\app.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\index.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\routes.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\controller.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\hfService.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\llmService.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\api\\services\\promptBuilder.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\fileParser.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\detectLanguage.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\impactAnalysis.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\dfsAnalysis.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\repoCloner.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\core\\saveInsights.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\config.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Graph.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Markdown.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Analysisbar.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\AnalysisCard.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\api.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Navbar.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\timeAgo.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\Sidebar.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\components\\InputCard.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\main.jsx",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\src\\dashboard\\src\\App.jsx"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\app.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\controllers\\userController.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\utils\\helper.js",
+        "target": "C:\\code-analyser\\cloneRepos\\code-analyzer\\test-project\\services\\userService.js"
+      }
+    }
+  ]
+}

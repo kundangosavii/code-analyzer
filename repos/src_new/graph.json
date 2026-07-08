@@ -1,0 +1,125 @@
+{
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\app.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Routes\\user.routes.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\index.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\constant.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\db\\index.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\new.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\asyncHandlers.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiError.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\user.models.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\cloudinary.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiResponse.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Routes\\user.routes.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiError.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiResponse.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\asyncHandlers.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\videos.models.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\db\\index.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\constant.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\index.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\index.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\db\\index.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\app.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiError.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\asyncHandlers.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\user.models.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Routes\\user.routes.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\multer.Middleware.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\subscription.model.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\user.models.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\videos.models.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Routes\\user.routes.js": {
+    "imports": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js"
+    ],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\app.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiError.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiResponse.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\asyncHandlers.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js",
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js"
+    ]
+  },
+  "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\cloudinary.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js"
+    ]
+  }
+}

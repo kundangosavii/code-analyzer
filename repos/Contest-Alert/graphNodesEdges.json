@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\controller.js",
+        "label": "controller.js",
+        "type": "Backend"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\routes.js",
+        "label": "routes.js",
+        "type": "Backend"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\server.js",
+        "label": "server.js",
+        "type": "Backend"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\service.js",
+        "label": "service.js",
+        "type": "Backend"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\controller.js",
+        "target": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\service.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\server.js",
+        "target": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\routes.js"
+      }
+    }
+  ]
+}

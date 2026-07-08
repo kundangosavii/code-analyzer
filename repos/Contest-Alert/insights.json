@@ -1,0 +1,19 @@
+{
+  "EntryPoints": [
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\controller.js",
+      "imports": [
+        "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\service.js"
+      ]
+    },
+    {
+      "file": "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\server.js",
+      "imports": [
+        "C:\\code-analyser\\cloneRepos\\Contest-Alert\\Backend\\routes.js"
+      ]
+    }
+  ],
+  "UnusedFiles": [],
+  "HighlyCoupledFiles": [],
+  "CentralFiles": []
+}

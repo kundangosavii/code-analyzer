@@ -1,0 +1,31 @@
+Start from "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\index.js" — likely an entry point.
+Start from "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\main.jsx" — likely an entry point.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\postcss.config.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\tailwind.config.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\vite.config.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\controllers\userController.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\index.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\routes\moviesRoutes.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\main.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Admin\Dashboard\Main\Main.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Admin\GenreList.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Auth\Login.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Auth\Register.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Movies\AllMovies.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Movies\MoviesContainerPage.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\User\Profile.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\store.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\middlewares\asyncHandler.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\middlewares\authMiddleware.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\backend\models\User.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\component\Loader.jsx" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\component\SliderUtil.jsx" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Admin\Dashboard\Main\RealTimeCard.jsx" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\pages\Movies\MovieCard.jsx" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\api\apiSlice.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\api\genre.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\api\movies.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\api\users.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\constants.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\features\auth\authSlice.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\MERN-Movies-App\frontend\src\redux\features\movies\moviesSlice.js" is heavily used — ensure it's well-maintained.

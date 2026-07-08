@@ -1,0 +1,34 @@
+{
+  "controller.js": {
+    "file": "controller.js",
+    "imports": 1,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 1
+  },
+  "routes.js": {
+    "file": "routes.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "server.js": {
+    "file": "server.js",
+    "imports": 1,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 1
+  },
+  "service.js": {
+    "file": "service.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  }
+}

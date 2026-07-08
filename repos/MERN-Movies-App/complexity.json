@@ -1,0 +1,466 @@
+{
+  "db.js": {
+    "file": "db.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "genreController.js": {
+    "file": "genreController.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 10
+  },
+  "movieController.js": {
+    "file": "movieController.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 9
+  },
+  "userController.js": {
+    "file": "userController.js",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "index.js": {
+    "file": "index.js",
+    "imports": 5,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "asyncHandler.js": {
+    "file": "asyncHandler.js",
+    "imports": 0,
+    "importedBy": 3,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "authMiddleware.js": {
+    "file": "authMiddleware.js",
+    "imports": 2,
+    "importedBy": 3,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "checkId.js": {
+    "file": "checkId.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Genre.js": {
+    "file": "Genre.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "Movie.js": {
+    "file": "Movie.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "User.js": {
+    "file": "User.js",
+    "imports": 0,
+    "importedBy": 2,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 13
+  },
+  "genreRoutes.js": {
+    "file": "genreRoutes.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "moviesRoutes.js": {
+    "file": "moviesRoutes.js",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "uploadRoutes.js": {
+    "file": "uploadRoutes.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "userRoutes.js": {
+    "file": "userRoutes.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "createToken.js": {
+    "file": "createToken.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "postcss.config.js": {
+    "file": "postcss.config.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "App.jsx": {
+    "file": "App.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "GenreForm.jsx": {
+    "file": "GenreForm.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Loader.jsx": {
+    "file": "Loader.jsx",
+    "imports": 0,
+    "importedBy": 3,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 12
+  },
+  "Modal.jsx": {
+    "file": "Modal.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "SliderUtil.jsx": {
+    "file": "SliderUtil.jsx",
+    "imports": 1,
+    "importedBy": 2,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "main.jsx": {
+    "file": "main.jsx",
+    "imports": 16,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 16
+  },
+  "AdminMoviesList.jsx": {
+    "file": "AdminMoviesList.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "AdminRoute.jsx": {
+    "file": "AdminRoute.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "AllComments.jsx": {
+    "file": "AllComments.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "CreateMovie.jsx": {
+    "file": "CreateMovie.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "AdminDashboard.jsx": {
+    "file": "AdminDashboard.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "Main.jsx": {
+    "file": "Main.jsx",
+    "imports": 6,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "PrimaryCard.jsx": {
+    "file": "PrimaryCard.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "RealTimeCard.jsx": {
+    "file": "RealTimeCard.jsx",
+    "imports": 2,
+    "importedBy": 2,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "SecondaryCard.jsx": {
+    "file": "SecondaryCard.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "VideoCard.jsx": {
+    "file": "VideoCard.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "Sidebar.jsx": {
+    "file": "Sidebar.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "GenreList.jsx": {
+    "file": "GenreList.jsx",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "UpdateMovie.jsx": {
+    "file": "UpdateMovie.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "Login.jsx": {
+    "file": "Login.jsx",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Navigation.jsx": {
+    "file": "Navigation.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 10
+  },
+  "PrivateRoute.jsx": {
+    "file": "PrivateRoute.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 5
+  },
+  "Register.jsx": {
+    "file": "Register.jsx",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Home.jsx": {
+    "file": "Home.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "AllMovies.jsx": {
+    "file": "AllMovies.jsx",
+    "imports": 5,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 10
+  },
+  "Header.jsx": {
+    "file": "Header.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 10
+  },
+  "MovieCard.jsx": {
+    "file": "MovieCard.jsx",
+    "imports": 0,
+    "importedBy": 2,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 16
+  },
+  "MovieDetails.jsx": {
+    "file": "MovieDetails.jsx",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "MoviesContainerPage.jsx": {
+    "file": "MoviesContainerPage.jsx",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "MovieTabs.jsx": {
+    "file": "MovieTabs.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Profile.jsx": {
+    "file": "Profile.jsx",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "apiSlice.js": {
+    "file": "apiSlice.js",
+    "imports": 1,
+    "importedBy": 4,
+    "depth": 6,
+    "inCycle": false,
+    "complexityScore": 27
+  },
+  "genre.js": {
+    "file": "genre.js",
+    "imports": 2,
+    "importedBy": 4,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 19
+  },
+  "movies.js": {
+    "file": "movies.js",
+    "imports": 2,
+    "importedBy": 10,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 31
+  },
+  "users.js": {
+    "file": "users.js",
+    "imports": 2,
+    "importedBy": 7,
+    "depth": 5,
+    "inCycle": false,
+    "complexityScore": 31
+  },
+  "constants.js": {
+    "file": "constants.js",
+    "imports": 0,
+    "importedBy": 4,
+    "depth": 7,
+    "inCycle": false,
+    "complexityScore": 29
+  },
+  "authSlice.js": {
+    "file": "authSlice.js",
+    "imports": 0,
+    "importedBy": 5,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 19
+  },
+  "moviesSlice.js": {
+    "file": "moviesSlice.js",
+    "imports": 0,
+    "importedBy": 2,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 10
+  },
+  "store.js": {
+    "file": "store.js",
+    "imports": 3,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "tailwind.config.js": {
+    "file": "tailwind.config.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "vite.config.js": {
+    "file": "vite.config.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  }
+}

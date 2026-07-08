@@ -1,0 +1,505 @@
+{
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\config\\db.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\genreController.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\asyncHandler.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\genreRoutes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\movieController.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Movie.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\User.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\asyncHandler.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\utils\\createToken.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\userRoutes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\config\\db.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\userRoutes.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\genreRoutes.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\uploadRoutes.js"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\asyncHandler.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\genreController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\User.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\asyncHandler.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\genreRoutes.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\userRoutes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\checkId.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Genre.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\genreController.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\Movie.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\movieController.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\models\\User.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\genreRoutes.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\genreController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\moviesRoutes.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\movieController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\checkId.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\uploadRoutes.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\routes\\userRoutes.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\middlewares\\authMiddleware.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\index.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\utils\\createToken.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\backend\\controllers\\userController.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\postcss.config.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\App.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Navigation.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\GenreForm.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Loader.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Modal.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\SliderUtil.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieCard.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\Header.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\App.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminRoute.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\PrivateRoute.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Home.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminMoviesList.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\UpdateMovie.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\CreateMovie.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieDetails.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AllComments.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\AdminDashboard.jsx"
+    ],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminMoviesList.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminRoute.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AllComments.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\CreateMovie.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\AdminDashboard.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Sidebar\\Sidebar.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\SecondaryCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\VideoCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\AdminDashboard.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\PrimaryCard.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\PrimaryCard.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\SecondaryCard.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\VideoCard.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Sidebar\\Sidebar.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\AdminDashboard.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\GenreForm.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Modal.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\UpdateMovie.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Loader.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Navigation.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\App.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\PrivateRoute.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Loader.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Home.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\Header.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\movies\\moviesSlice.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\Header.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\SliderUtil.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Home.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieCard.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\SliderUtil.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieDetails.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieTabs.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\SliderUtil.jsx"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Home.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieTabs.jsx": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieDetails.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\component\\Loader.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\CreateMovie.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\GenreList.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AdminMoviesList.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\AllComments.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\CreateMovie.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\UpdateMovie.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\Header.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MovieDetails.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\MoviesContainerPage.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\Main.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\PrimaryCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Admin\\Dashboard\\Main\\RealTimeCard.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Navigation.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\constants.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\genre.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\movies.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\users.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Login.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Navigation.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Auth\\Register.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\User\\Profile.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\movies\\moviesSlice.js": {
+    "imports": [],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\pages\\Movies\\AllMovies.jsx",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\store.js": {
+    "imports": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\api\\apiSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\auth\\authSlice.js",
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\redux\\features\\movies\\moviesSlice.js"
+    ],
+    "importedBy": [
+      "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\src\\main.jsx"
+    ]
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\tailwind.config.js": {
+    "imports": [],
+    "importedBy": []
+  },
+  "C:\\code-analyser\\cloneRepos\\MERN-Movies-App\\frontend\\vite.config.js": {
+    "imports": [],
+    "importedBy": []
+  }
+}

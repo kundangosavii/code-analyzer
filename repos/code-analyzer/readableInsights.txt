@@ -1,0 +1,14 @@
+Start from "C:\code-analyser\cloneRepos\code-analyzer\src\api\app.js" — likely an entry point.
+Start from "C:\code-analyser\cloneRepos\code-analyzer\src\dashboard\src\main.jsx" — likely an entry point.
+Start from "C:\code-analyser\cloneRepos\code-analyzer\test-project\app.js" — likely an entry point.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\dashboard\eslint.config.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\dashboard\vite.config.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\code-analyzer\test-project\controllers\high.Controller.js" is not imported anywhere — consider removing it.
+File "C:\code-analyser\cloneRepos\code-analyzer\index.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\api\controller.js" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\dashboard\src\App.jsx" has many dependencies — consider refactoring.
+File "C:\code-analyser\cloneRepos\code-analyzer\config.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\api\controller.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\core\dfsAnalysis.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\code-analyzer\src\dashboard\src\api.js" is heavily used — ensure it's well-maintained.
+File "C:\code-analyser\cloneRepos\code-analyzer\test-project\services\userService.js" is heavily used — ensure it's well-maintained.

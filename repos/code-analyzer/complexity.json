@@ -1,0 +1,290 @@
+{
+  "config.js": {
+    "file": "config.js",
+    "imports": 0,
+    "importedBy": 5,
+    "depth": 5,
+    "inCycle": false,
+    "complexityScore": 25
+  },
+  "index.js": {
+    "file": "index.js",
+    "imports": 11,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 22
+  },
+  "app.js": {
+    "file": "app.js",
+    "imports": 1,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 1
+  },
+  "controller.js": {
+    "file": "controller.js",
+    "imports": 3,
+    "importedBy": 2,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 13
+  },
+  "routes.js": {
+    "file": "routes.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "hfService.js": {
+    "file": "hfService.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "llmService.js": {
+    "file": "llmService.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 13
+  },
+  "promptBuilder.js": {
+    "file": "promptBuilder.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "detectLanguage.js": {
+    "file": "detectLanguage.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 5,
+    "inCycle": false,
+    "complexityScore": 17
+  },
+  "dfsAnalysis.js": {
+    "file": "dfsAnalysis.js",
+    "imports": 0,
+    "importedBy": 2,
+    "depth": 5,
+    "inCycle": false,
+    "complexityScore": 19
+  },
+  "fileLoader.js": {
+    "file": "fileLoader.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "fileParser.js": {
+    "file": "fileParser.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "graphBuilder.js": {
+    "file": "graphBuilder.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "graphTransformation.js": {
+    "file": "graphTransformation.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "impactAnalysis.js": {
+    "file": "impactAnalysis.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 16
+  },
+  "insightEngine.js": {
+    "file": "insightEngine.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "outputEngine.js": {
+    "file": "outputEngine.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "repoCloner.js": {
+    "file": "repoCloner.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "saveInsights.js": {
+    "file": "saveInsights.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 15
+  },
+  "eslint.config.js": {
+    "file": "eslint.config.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "api.js": {
+    "file": "api.js",
+    "imports": 0,
+    "importedBy": 2,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 16
+  },
+  "App.jsx": {
+    "file": "App.jsx",
+    "imports": 6,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "Analysisbar.jsx": {
+    "file": "Analysisbar.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 9
+  },
+  "AnalysisCard.jsx": {
+    "file": "AnalysisCard.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "Graph.jsx": {
+    "file": "Graph.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "InputCard.jsx": {
+    "file": "InputCard.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 12
+  },
+  "Markdown.jsx": {
+    "file": "Markdown.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Navbar.jsx": {
+    "file": "Navbar.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 9
+  },
+  "Sidebar.jsx": {
+    "file": "Sidebar.jsx",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 9
+  },
+  "timeAgo.jsx": {
+    "file": "timeAgo.jsx",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 11
+  },
+  "main.jsx": {
+    "file": "main.jsx",
+    "imports": 1,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 1
+  },
+  "vite.config.js": {
+    "file": "vite.config.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "high.Controller.js": {
+    "file": "high.Controller.js",
+    "imports": 0,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 0
+  },
+  "userController.js": {
+    "file": "userController.js",
+    "imports": 2,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 7
+  },
+  "userService.js": {
+    "file": "userService.js",
+    "imports": 1,
+    "importedBy": 3,
+    "depth": 2,
+    "inCycle": true,
+    "complexityScore": 18
+  },
+  "helper.js": {
+    "file": "helper.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": true,
+    "complexityScore": 11
+  }
+}

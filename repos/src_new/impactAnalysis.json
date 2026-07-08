@@ -1,0 +1,121 @@
+[
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\app.js",
+    "label": "app.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\constant.js",
+    "label": "constant.js",
+    "direct": "index.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\new.js",
+    "label": "new.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\user.controller.js",
+    "label": "user.controller.js",
+    "direct": "user.routes.js",
+    "indirect": "app.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Controllers\\video.controller.js",
+    "label": "video.controller.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\db\\index.js",
+    "label": "index.js",
+    "direct": "index.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\index.js",
+    "label": "index.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\auth.middleware.js",
+    "label": "auth.middleware.js",
+    "direct": "user.routes.js",
+    "indirect": "app.js, index.js",
+    "totalImpactedFiles": 3
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Middleware\\multer.Middleware.js",
+    "label": "multer.Middleware.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\subscription.model.js",
+    "label": "subscription.model.js",
+    "direct": "",
+    "indirect": "",
+    "totalImpactedFiles": 0
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\user.models.js",
+    "label": "user.models.js",
+    "direct": "user.controller.js, auth.middleware.js",
+    "indirect": "user.routes.js, app.js, index.js",
+    "totalImpactedFiles": 5
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Models\\videos.models.js",
+    "label": "videos.models.js",
+    "direct": "video.controller.js",
+    "indirect": "",
+    "totalImpactedFiles": 1
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Routes\\user.routes.js",
+    "label": "user.routes.js",
+    "direct": "app.js",
+    "indirect": "index.js",
+    "totalImpactedFiles": 2
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiError.js",
+    "label": "ApiError.js",
+    "direct": "user.controller.js, video.controller.js, auth.middleware.js",
+    "indirect": "user.routes.js, app.js, index.js",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\ApiResponse.js",
+    "label": "ApiResponse.js",
+    "direct": "user.controller.js, video.controller.js",
+    "indirect": "user.routes.js, app.js, index.js",
+    "totalImpactedFiles": 5
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\asyncHandlers.js",
+    "label": "asyncHandlers.js",
+    "direct": "user.controller.js, video.controller.js, auth.middleware.js",
+    "indirect": "user.routes.js, app.js, index.js",
+    "totalImpactedFiles": 6
+  },
+  {
+    "file": "C:\\web devolapment\\Backend Learning\\Chai Aur Backend\\src_new\\Utils\\cloudinary.js",
+    "label": "cloudinary.js",
+    "direct": "user.controller.js",
+    "indirect": "user.routes.js, app.js, index.js",
+    "totalImpactedFiles": 4
+  }
+]
