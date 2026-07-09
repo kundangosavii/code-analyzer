@@ -123,6 +123,7 @@ program
 program
     .command('dashboard')
     .action(async () => {
+        section("Starting the Dashboard");
         const backendPath = "C:\\code-analyser";
         const frontendPath = "C:\\code-analyser\\src\\dashboard";
 
@@ -172,6 +173,8 @@ program
     .action((path) => {
         const result = loadFiles(path);
 
+        section("Complexity Analysis");
+
         const complexity = Object.entries(result.complexity).map(([file, data]) => ({
             fileName: data.file,
             complexityScore: data.complexityScore,
@@ -186,6 +189,8 @@ program
     .action((repoPath) => {
         const result = loadFiles(repoPath);
 
+        section("Cycle Detection");
+
         const cycles = result.cycle.map((cycle, index) => ({
             cycleNumber: index + 1,
             files: cycle.map((file) => path.basename(file)),
@@ -196,6 +201,25 @@ program
         cycles.forEach((cycle) => {
             console.log(`Cycle ${cycle.cycleNumber}: ${cycle.files.join(' -> ')}`);
         });
+    })
+
+program
+    .command('depth-table')
+    .argument('<repoPath>')
+    .action((path) => {
+        const result = loadFiles(path);
+
+        section("Depth Analysis");
+
+        const table = new Table({
+            head: ["File", "Score", "Depth", "In Cycle", "Imports", "Imported By"],
+        });
+
+        Object.entries(result.complexity).forEach(([fileName, data]) => {
+            table.push([fileName, data.complexityScore, data.depth, data.inCycle ? "Yes" : "No", data.imports, data.importedBy]);
+        });
+
+        console.log(table.toString());
     })
 
 
