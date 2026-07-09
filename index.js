@@ -53,14 +53,14 @@ async function run(repoUrl) {
   const depth = calculateDepth(graph)
   const complexity = calculateComplexity(graph, depth, cycle)
 
-  // saveGraph(TARGET_DIR, graph);
-  // saveInsights(TARGET_DIR, insights);
-  // saveReadableInsights(TARGET_DIR, ReadableInsights);
-  // saveGraphInNodeAndEdgesFormat(TARGET_DIR, graphNodesEdges);
-  // saveCycle(TARGET_DIR, cycle);
-  // saveComplexity(TARGET_DIR, complexity);
+  saveGraph(TARGET_DIR, graph);
+  saveInsights(TARGET_DIR, insights);
+  saveReadableInsights(TARGET_DIR, ReadableInsights);
+  saveGraphInNodeAndEdgesFormat(TARGET_DIR, graphNodesEdges);
+  saveCycle(TARGET_DIR, cycle);
+  saveComplexity(TARGET_DIR, complexity);
 
-  // impactAnalysis(TARGET_DIR);
+  impactAnalysis(TARGET_DIR);
 
   const date = new Date();
   const dateString = date.toLocaleString();

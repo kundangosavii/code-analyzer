@@ -9,6 +9,7 @@ import Table from "cli-table3"
 
 import { run } from '../index.js';
 import { section } from './helper.js';
+import { loadFiles } from './loadFiles.js';
 
 
 const program = new Command();
@@ -165,7 +166,19 @@ program
     });
 
 
+program
+    .command('complexity')
+    .argument('<repoPath>')
+    .action((path) => {
+        const result = loadFiles(path);
 
+        const complexity = Object.entries(result.complexity).map(([file, data]) => ({
+            fileName: data.file,
+            complexityScore: data.complexityScore,
+        }));
+        console.log(chalk.bold.blue(`Found ${complexity.length} files`));
+        console.table(complexity);
+    })
 
 
 program.parse(process.argv);
