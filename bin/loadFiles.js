@@ -17,5 +17,6 @@ export function loadFiles(repoPath){
 
     return {
         complexity: JSON.parse(fs.readFileSync(path.join(targetPath, 'complexity.json'), 'utf-8')),
+        cycle : JSON.parse(fs.readFileSync(path.join(targetPath, 'cycle.json'), 'utf-8')),
     }
 }

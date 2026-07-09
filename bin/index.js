@@ -60,7 +60,7 @@ program
     });
 
 program
-    .command('detail')
+    .command('detail-analysis')
     .argument('<repoPath>')
     .action(async (repoPath) => {
         const delay = (ms) => new Promise(res => setTimeout(res, ms));
@@ -178,6 +178,24 @@ program
         }));
         console.log(chalk.bold.blue(`Found ${complexity.length} files`));
         console.table(complexity);
+    })
+
+program
+    .command('cycles')
+    .argument('<repoPath>')
+    .action((repoPath) => {
+        const result = loadFiles(repoPath);
+
+        const cycles = result.cycle.map((cycle, index) => ({
+            cycleNumber: index + 1,
+            files: cycle.map((file) => path.basename(file)),
+        }));
+
+        console.log(chalk.bold.red(`Found ${cycles.length} cycles`));
+
+        cycles.forEach((cycle) => {
+            console.log(`Cycle ${cycle.cycleNumber}: ${cycle.files.join(' -> ')}`);
+        });
     })
 
 
