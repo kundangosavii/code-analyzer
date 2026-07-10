@@ -46,7 +46,7 @@ export default function Graph({ graphData, onNodeClick }) {
           selector: "edge",
           style: {
             width: 1,
-            'line-color': '#000000',
+            'line-color': '#ffffff',
             'target-arrow-color': '#ccc',
             'target-arrow-shape': 'triangle'
           },
