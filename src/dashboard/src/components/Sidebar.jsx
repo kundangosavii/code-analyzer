@@ -24,7 +24,7 @@ export default function Sidebar({ repos, onRepoClick }) {
   ];
 
   return (
-    <div className="w-64 h-[90vh] bg-[#080817] border-r border-gray-800 text-gray-300 flex flex-col justify-between p-4">
+    <div className="w-64 h-[90vh] bg-black border-r border-gray-800 text-gray-300 flex flex-col justify-between p-4">
 
       <div>
         <div className="mb-6">
@@ -65,7 +65,7 @@ export default function Sidebar({ repos, onRepoClick }) {
 
       <button
         onClick={() => setShowInputCard((prev) => !prev)}
-        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+        className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-700 text-white font-semibold py-2 rounded-md">
         <Plus size={16} />
         Analyze New Repo
       </button>
