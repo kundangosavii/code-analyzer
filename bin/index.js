@@ -15,9 +15,24 @@ import { loadFiles } from './loadFiles.js';
 const program = new Command();
 
 program
+    .name('code-analyser')
+    .description('Analyze your codebase for risks and dependencies')
+    .version('1.0.0');
+
+program
     .command('analyze')
     .argument('<repoPath>', 'Path to the repository or GitHub repository URL')
+    .description('Analyze the codebase and provide insights of the codebase')
     .option('--json', 'Output results in JSON format')
+    .addHelpText(
+        "after",
+        `
+Examples:
+  code-analyzer analyze ./project
+  code-analyzer cycles ./project --top 3
+  code-analyzer complexity ./project --json
+`
+    )
     .action(async (repoPath, options) => {
         const delay = (ms) => new Promise(res => setTimeout(res, ms));
         const spinner = ora('Analyzing repository...').start();
@@ -78,7 +93,17 @@ program
 program
     .command('detail-analysis')
     .argument('<repoPath>')
+    .description('Provide a detailed analysis of the codebase including complexity, cycles, and dead code')
     .option('--json', 'Output results in JSON format')
+        .addHelpText(
+        "after",
+        `
+Examples:
+  code-analyzer analyze ./project
+  code-analyzer cycles ./project --top 3
+  code-analyzer complexity ./project --json
+`
+    )
     .action(async (repoPath, options) => {
         const delay = (ms) => new Promise(res => setTimeout(res, ms));
         const spinner = ora('Analyzing repository...').start();
@@ -141,10 +166,21 @@ program
         }
 
 
+
     })
 
 program
     .command('dashboard')
+    .description('Start the interactive dashboard for visualizing and analyzing the codebase')
+    .addHelpText(
+        "after",
+        `
+Examples:
+  code-analyzer analyze ./project
+  code-analyzer cycles ./project --top 3
+  code-analyzer complexity ./project --json
+`
+    )
     .action(async () => {
         section("Starting the Dashboard");
         const backendPath = "C:\\code-analyser";
@@ -192,7 +228,17 @@ program
 program
     .command('complexity')
     .argument('<repoPath>')
+    .description('Analyze the complexity of the codebase and provide a summary of complexity scores for each file')
     .option('--json', 'Output results in JSON format')
+    .addHelpText(
+        "after",
+        `
+Examples:
+  code-analyzer analyze ./project
+  code-analyzer cycles ./project --top 3
+  code-analyzer complexity ./project --json
+`
+    )
     .action((path, options) => {
         const result = loadFiles(path);
 
@@ -213,7 +259,15 @@ program
 program
     .command('cycles')
     .argument('<repoPath>')
+    .description('Detect cycles in the codebase')
     .option('--json', 'Output results in JSON format')
+    .addHelpText(
+        "after",
+        `
+Examples:
+  code-analyzer cycles ./project --top 3
+`
+    )
     .action((repoPath, options) => {
         const result = loadFiles(repoPath);
 
@@ -238,6 +292,14 @@ program
 program
     .command('depth-table')
     .argument('<repoPath>')
+    .description('Generate a depth analysis table for the codebase')
+    .addHelpText(
+        "after",
+        `
+Examples:
+    code-analyzer depth-table ./project
+`
+    )
     .option('--json', 'Output results in JSON format')
     .action((path, options) => {
         const result = loadFiles(path);
