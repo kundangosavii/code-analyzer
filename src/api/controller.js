@@ -59,15 +59,12 @@ const analyzeController = (req, res) => {
         else {
             run(repoUrl)
             const UniqueId = generateUniqeId();
-            console.log("Generated UniqueId:", UniqueId);
             let repoName;
             if (path.basename(TARGET_DIR).includes(".git")) {
                 repoName = path.basename(TARGET_DIR).replace('.git', '');
-                console.log("repoName:", repoName);
             }
             else {
                 repoName = path.basename(TARGET_DIR);
-                console.log("repoName:", repoName);
             }
             const newObj = {
                 repoName: repoName,
@@ -288,7 +285,6 @@ const getComplexityController = (req, res) => {
             const fileName = file.split(path.sep).slice(-1)[0];
             const complexity = JSON.parse(data);
             const result = complexity[fileName];
-            console.log("Complexity result for file:", fileName, result);
             res.status(200).json(result);
         });
     }
