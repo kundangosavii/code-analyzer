@@ -6,18 +6,20 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>CodeSync</title>
+		<title>CodeSync-docs</title>
 	</head>
-	<body>
+	<script is:inline>
+		const getThemePreference = () => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')){
+				return localStorage.getItem('theme')
+			}
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+
+		const isDark = getThemePreference() === 'dark';
+      	document.documentElement.classList.toggle('dark', isDark);
+	</script>
+	<body class="">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
