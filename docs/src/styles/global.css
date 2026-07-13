@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color: #f8f5f0;
+  --bg-color: rgb(248, 245, 240);
   --text-color: #040404e3;
+  --bg-gradient:
+    linear-gradient(12deg, rgb(248, 245, 240)  60%, rgba(240, 120, 29, 1) 200%);
+    
 }
 
 html.dark {
   --bg-color: #000000fb;
   --text-color: #f8fafc;
+  --bg-gradient:
+    linear-gradient(12deg,rgba(0, 0, 0, 1) 60%, rgba(240, 120, 29, 1) 250%);
 }
 
 body {
   background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text-color);
 }
