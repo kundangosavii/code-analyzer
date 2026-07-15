@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 :root {
-  --bg-color: rgb(248, 245, 240);
+  --bg-color: #f5f0e9;
   --text-color: #040404e3;
   --bg-gradient:
     linear-gradient(12deg, rgb(248, 245, 240)  60%, rgba(240, 120, 29, 1) 200%);
@@ -15,10 +15,21 @@ html.dark {
     linear-gradient(0deg,rgba(0, 0, 0, 1) 80%, rgba(240, 120, 29, 1) 250%);
 }
 
+html, body {
+  min-height: 100vh;
+  margin: 0;
+}
+
 body {
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text-color);
+
+  transition: background-image 0.4s ease-in-out;
+}
+
+body.scrolled {
+  background-image: none;
 }
