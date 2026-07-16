@@ -1,0 +1,58 @@
+---
+import DocSidebar from "../components/doc/Sidebar.astro";
+import RightToc from "../components/doc/RightToc.astro";
+import Navbar from "../components/Home/Navbar.astro"; 
+import "../styles/global.css";
+
+const { doc, headings } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{doc?.data?.title || "Documentation"}</title>
+  </head>
+  <body class="min-h-screen bg-[var(--bg-color)] text-[var(--text-color)] antialiased transition-colors duration-200 flex flex-col">
+    
+    <div class="absolute inset-x-0 top-0 -z-20 h-[36rem] bg-[radial-gradient(circle_at_top,_rgba(255,248,240,0.95),_rgba(255,240,225,0.72)_24%,_rgba(255,255,255,0.94)_55%,_transparent_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_42%),linear-gradient(180deg,_rgba(0,0,0,0.984),_rgba(0,0,0,0.984))]" />
+
+    <header class="sticky top-0 z-50 w-full border-b border-zinc-200/50 dark:border-zinc-800/50 bg-[var(--bg-color)]/80 backdrop-blur-md">
+      <Navbar />
+    </header>
+
+    
+    <div class="w-full max-w-8xl mx-auto flex-1 flex px-4 sm:px-6 lg:px-8">
+      
+      
+      <DocSidebar currentPath={currentPath} />
+
+      
+      <main class="flex-1 min-w-0 pt-20 pb-16 px-4 md:px-8 lg:px-12">
+        <article class="prose prose-zinc dark:prose-invert max-w-3xl mx-auto 
+                        prose-headings:font-semibold prose-headings:tracking-tight
+                        prose-a:text-orange-500 hover:prose-a:text-orange-600
+                        prose-pre:bg-zinc-950 prose-pre:border prose-pre:border-zinc-800 dark:prose-pre:border-zinc-800/50">
+          
+          {doc?.data?.title && (
+            <header class="mb-8 pb-4 border-b border-zinc-200/60 dark:border-zinc-800/60">
+              <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 mb-2">
+                {doc.data.title}
+              </h1>
+              {doc.data.description && (
+                <p class="text-xl text-zinc-500 dark:text-zinc-400 font-normal m-0">{doc.data.description}</p>
+              )}
+            </header>
+          )}
+
+          <slot />
+        </article>
+      </main>
+
+      <RightToc headings={headings} />
+
+    </div>
+  </body>
+</html>
