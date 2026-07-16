@@ -1,5 +1,5 @@
 ---
-
+import Search from './Search.astro'
 ---
 
 <header
@@ -10,68 +10,56 @@
 		class="mx-auto flex max-w items-center justify-between px-4 py-3 transition-all duration-300 ease-out dark:text-white"
 		data-navbar-shell
 	>
-		<a href="/" class="flex items-center gap-2 text-[1.1rem] font-semibold tracking-tight">
+		<!-- 1. LEFT: LOGO -->
+		<a href="/" class="flex items-center gap-2 text-[1.1rem] font-semibold tracking-tight shrink-0">
 			<span class="flex h-7 w-7 items-center justify-center rounded-md">
-                <img src="/favicon.svg">
+				<img src="/favicon.svg" alt="Logo" />
 			</span>
 			<span class="text-black dark:text-white">CodeSync-Docs</span>
 		</a>
 
-        <div class="mx-6 hidden flex-1 items-center justify-center md:flex">
-            <label class="relative w-full max-w-xl">
-        
-            <input
-                type="text"
-                placeholder="Search..."
-                class="w-full rounded-full border border-black/10 bg-white/70 py-2 pl-11 pr-4 text-sm text-zinc-900 outline-none placeholder:text-zinc-500 backdrop-blur-md transition focus:border-orange-500/40 focus:bg-white dark:focus:bg-black/25 dark:border-white/5 dark:bg-white/2 dark:text-white dark:placeholder:text-white"
-            />
+		<!-- 2. MIDDLE: DESKTOP SEARCH (Hidden on small screens, centered on md+) -->
+		<div class="mx-6 hidden flex-1 items-center justify-center md:flex">
+			<div class="w-full max-w-xl">
+				<Search />
+			</div>
+		</div>
 
-            <svg
-                class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500 dark:text-white/50"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-            >
-                <path
-                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"  
-                    stroke-linejoin="round"
-                />
-            </svg>
-            </label>    
-        </div>
+		<!-- 3. RIGHT: ACTION BUTTONS (+ MOBILE SEARCH ICON) -->
+		<div class="flex items-center gap-3 sm:gap-4 shrink-0">
+			
+			<!-- Mobile Search Icon Trigger (Visible ONLY on small screens) -->
+			<div class="md:hidden">
+				<Search />
+			</div>
 
-		<div class="flex items-center gap-3 sm:gap-5">
+			<!-- Theme Toggle Button -->
 			<button
 				id="theme-toggle"
 				type="button"
 				aria-label="Toggle dark mode"
-				class="grid h-8 w-8 place-items-center rounded-full border text-black dark:border-white backdrop-blur-md transition"
+				class="grid h-8 w-8 place-items-center rounded-full border text-black dark:border-white backdrop-blur-md transition cursor-pointer"
 			>
 				<img src="/theme-light.svg" class="h-5 w-5 dark:hidden" alt="" />
-                <img src="/theme-dark.svg" class="hidden h-5 w-5 dark:block" alt="" />
-				
+				<img src="/theme-dark.svg" class="hidden h-5 w-5 dark:block" alt="" />
 			</button>
 
-            <button
+			<!-- GitHub Button -->
+			<button
 				id="github"
 				type="button"
 				aria-label="Open github"
-				class="grid h-8 w-8 place-items-center rounded-full border text-zinc-950 backdrop-blur-md transition"
+				class="grid h-8 w-8 place-items-center rounded-full border text-zinc-950 backdrop-blur-md transition cursor-pointer"
 			>
-				<img src="/github.svg">
-				
+				<img src="/github.svg" alt="GitHub" />
 			</button>
 
+			<!-- Mobile Menu Button -->
 			<button
 				type="button"
 				aria-label="Open menu"
-				class="grid h-8 w-8 place-items-center rounded-full border border-black/10 bg-white/40 text-zinc-950 backdrop-blur-md transition hover:bg-white/60 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
+				class="grid h-8 w-8 place-items-center rounded-full border border-black/10 bg-white/40 text-zinc-950 backdrop-blur-md transition hover:bg-white/60 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15 cursor-pointer"
 			> 
-				
 			</button>
 		</div>
 	</div>

@@ -7,9 +7,7 @@ if (docs.length === 0) {
   throw new Error("No docs found");
 }
 
-// Sort by order
 docs.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
-// FIX: Changed docs[0].slug to docs[0].id
 return Astro.redirect(`/docs/getting-started/install`);
 ---
