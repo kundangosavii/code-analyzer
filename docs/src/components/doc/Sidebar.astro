@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+
+const { currentPath } = Astro.props;
+const docs = await getCollection("docs");
+
+// Sort documentation by order defined in frontmatter
+docs.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
+---
+
+<aside class="hidden md:block w-64 shrink-0 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto pt-8 pr-6 border-r border-zinc-200/40 dark:border-zinc-800/40">
+  <div class="flex items-center gap-2 mb-8 px-3">
+    <div class="h-6 w-6 rounded-md bg-orange-500 flex items-center justify-center text-white font-bold text-sm">C</div>
+    <span class="font-bold text-zinc-900 dark:text-white tracking-tight">CodeSync Docs</span>
+  </div>
+
+  <nav class="space-y-1">
+    <p class="px-3 text-xs font-semibold tracking-wider text-zinc-400 dark:text-zinc-500 uppercase mb-2">
+      Documentation
+    </p>
+    
+    {docs.map((item) => {
+      const itemPath = `/docs/${item.id}`;
+      const isActive = currentPath === itemPath;
+
+      return (
+        <a
+          href={itemPath}
+          class={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+            isActive
+              ? "bg-orange-500/10 text-orange-600 dark:text-orange-400 font-semibold"
+              : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-100"
+          }`}
+        >
+          {item.data.title || item.id}
+        </a>
+      );
+    })}
+  </nav>
+</aside>
