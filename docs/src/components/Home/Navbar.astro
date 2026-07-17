@@ -1,99 +1,145 @@
 ---
-import Search from './Search.astro'
+import Search from "./Search.astro";
 ---
 
-<header
-	id="site-navbar"
-	class="fixed top-0 left-0 right-0 z-50"
->
+<header id="site-navbar" class="fixed top-0 left-0 right-0 z-50">
 	<div
 		class="mx-auto flex max-w items-center justify-between px-4 py-3 transition-all duration-300 ease-out dark:text-white"
 		data-navbar-shell
 	>
-		<!-- 1. LEFT: LOGO -->
-		<a href="/" class="flex items-center gap-2 text-[1.1rem] font-semibold tracking-tight shrink-0">
+		<a
+			href="/"
+			class="flex items-center gap-2 text-[1.1rem] font-semibold tracking-tight shrink-0"
+		>
 			<span class="flex h-7 w-7 items-center justify-center rounded-md">
-				<img src="/favicon.svg" alt="Logo" />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 32 32"
+					class="w-7 h-7 shrink-0"
+				>
+					
+					<rect
+						x="0"
+						y="0"
+						width="32"
+						height="32"
+						rx="5"
+						class="fill-white dark:fill-black transition-colors"
+					></rect>
+
+					
+					<path
+						d="M 12 10 L 7.2 16 L 12 22 M 20 10 L 24.8 16 L 20 22"
+						fill="none"
+						stroke="#f97316"
+						stroke-width="3"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
 			</span>
 			<span class="text-black dark:text-white">CodeSync-Docs</span>
 		</a>
 
-		<!-- 2. MIDDLE: DESKTOP SEARCH (Hidden on small screens, centered on md+) -->
 		<div class="mx-6 hidden flex-1 items-center justify-center md:flex">
 			<div class="w-full max-w-xl">
 				<Search />
 			</div>
 		</div>
 
-		<!-- 3. RIGHT: ACTION BUTTONS (+ MOBILE SEARCH ICON) -->
 		<div class="flex items-center gap-3 sm:gap-4 shrink-0">
-			
-			<!-- Mobile Search Icon Trigger (Visible ONLY on small screens) -->
 			<div class="md:hidden">
 				<Search />
 			</div>
 
-			<!-- Theme Toggle Button -->
+			<a
+				href="/docs"
+				class="grid h-8 w-8 place-items-center rounded-full border text-black dark:border-white backdrop-blur-md transition cursor-pointer"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="w-6 h-6 stroke-black dark:stroke-white fill-none"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M12 7c-2.5-1.5-6-1.5-9-1v13c3-.5 6.5-.5 9 1"
+					></path>
+					<path d="M12 7c2.5-1.5 6-1.5 9-1v13c-3-.5-6.5-.5-9 1"
+					></path>
+					<path d="M12 7v13"></path>
+				</svg>
+			</a>
+
+			<a
+				href="https://github.com/kundangosavii/codeSync"
+				class="grid h-8 w-8 place-items-center rounded-full border text-zinc-950 backdrop-blur-md transition cursor-pointer"
+			>
+				<img src="/github.svg" alt="GitHub" />
+			</a>
+
 			<button
 				id="theme-toggle"
 				type="button"
 				aria-label="Toggle dark mode"
 				class="grid h-8 w-8 place-items-center rounded-full border text-black dark:border-white backdrop-blur-md transition cursor-pointer"
 			>
-				<img src="/theme-light.svg" class="h-5 w-5 dark:hidden" alt="" />
-				<img src="/theme-dark.svg" class="hidden h-5 w-5 dark:block" alt="" />
-			</button>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					width="24"
+					height="24"
+					fill="currentColor"
+					class="text-zinc-900 dark:text-zinc-100 transition-colors"
+				>
 
-			<!-- GitHub Button -->
-			<button
-				id="github"
-				type="button"
-				aria-label="Open github"
-				class="grid h-8 w-8 place-items-center rounded-full border text-zinc-950 backdrop-blur-md transition cursor-pointer"
-			>
-				<img src="/github.svg" alt="GitHub" />
-			</button>
+					<path
+						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+					></path>
 
-			<!-- Mobile Menu Button -->
-			<button
-				type="button"
-				aria-label="Open menu"
-				class="grid h-8 w-8 place-items-center rounded-full border border-black/10 bg-white/40 text-zinc-950 backdrop-blur-md transition hover:bg-white/60 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15 cursor-pointer"
-			> 
+					<rect x="11.2" y="5" width="8" height="1.8" rx="0.9"></rect>
+					<rect x="12" y="8.5" width="8.8" height="1.8" rx="0.8"
+					></rect>
+					<rect x="13" y="12" width="9" height="1.8" rx="0.9"></rect>
+					<rect x="12" y="15.5" width="8.8" height="1.8" rx="0.9"
+					></rect>
+					<rect x="11.2" y="19" width="6" height="1.8" rx="0.9"
+					></rect>
+				</svg>
 			</button>
 		</div>
 	</div>
 
 	<script is:inline>
-		const navbar = document.getElementById('site-navbar');
-		const shell = navbar?.querySelector('[data-navbar-shell]');
-		const themeToggle = document.getElementById('theme-toggle');
+		const navbar = document.getElementById("site-navbar");
+		const shell = navbar?.querySelector("[data-navbar-shell]");
+		const themeToggle = document.getElementById("theme-toggle");
 
 		const updateNavbarState = () => {
 			if (!navbar || !shell) return;
 
 			const isScrolled = window.scrollY > 10;
 
-			shell.classList.toggle('border-white/15', isScrolled);
-			shell.classList.toggle('bg-white/5', isScrolled);
-			
-			shell.classList.toggle('backdrop-blur-2xl', isScrolled);
-			shell.classList.toggle('backdrop-saturate-150', isScrolled);
+			shell.classList.toggle("border-white/15", isScrolled);
+			shell.classList.toggle("bg-white/5", isScrolled);
 
-			shell.classList.toggle('bg-transparent', !isScrolled);
-			shell.classList.toggle('shadow-none', !isScrolled);
+			shell.classList.toggle("backdrop-blur-2xl", isScrolled);
+			shell.classList.toggle("backdrop-saturate-150", isScrolled);
+
+			shell.classList.toggle("bg-transparent", !isScrolled);
+			shell.classList.toggle("shadow-none", !isScrolled);
 		};
 
 		const handleToggleClick = () => {
 			const element = document.documentElement;
-			element.classList.toggle('dark');
+			element.classList.toggle("dark");
 
-			const isDark = element.classList.contains('dark');
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+			const isDark = element.classList.contains("dark");
+			localStorage.setItem("theme", isDark ? "dark" : "light");
 		};
 
-		themeToggle?.addEventListener('click', handleToggleClick);
-		window.addEventListener('scroll', updateNavbarState, { passive: true });
+		themeToggle?.addEventListener("click", handleToggleClick);
+		window.addEventListener("scroll", updateNavbarState, { passive: true });
 		updateNavbarState();
 	</script>
 </header>
