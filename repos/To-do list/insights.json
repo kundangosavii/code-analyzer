@@ -1,0 +1,14 @@
+{
+  "EntryPoints": [
+    {
+      "file": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\index.js",
+      "imports": [
+        "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\db\\index.js",
+        "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\app.js"
+      ]
+    }
+  ],
+  "UnusedFiles": [],
+  "HighlyCoupledFiles": [],
+  "CentralFiles": []
+}

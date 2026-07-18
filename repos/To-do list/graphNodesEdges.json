@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\app.js",
+        "label": "app.js",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\constant.js",
+        "label": "constant.js",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\controller\\Todo.controller.js",
+        "label": "Todo.controller.js",
+        "type": "controller"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\db\\index.js",
+        "label": "index.js",
+        "type": "db"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\index.js",
+        "label": "index.js",
+        "type": "src"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\models\\Todo.models.js",
+        "label": "Todo.models.js",
+        "type": "models"
+      }
+    },
+    {
+      "data": {
+        "id": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\routes\\Todo.routes.js",
+        "label": "Todo.routes.js",
+        "type": "routes"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\app.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\routes\\Todo.routes.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\controller\\Todo.controller.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\models\\Todo.models.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\db\\index.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\constant.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\index.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\db\\index.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\index.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\app.js"
+      }
+    },
+    {
+      "data": {
+        "source": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\routes\\Todo.routes.js",
+        "target": "C:\\web devolapment\\project\\MINI PROJECTS\\To-do list\\src\\controller\\Todo.controller.js"
+      }
+    }
+  ]
+}

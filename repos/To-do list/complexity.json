@@ -1,0 +1,50 @@
+{
+  "app.js": {
+    "file": "app.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 1,
+    "inCycle": false,
+    "complexityScore": 6
+  },
+  "constant.js": {
+    "file": "constant.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 8
+  },
+  "Todo.controller.js": {
+    "file": "Todo.controller.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 3,
+    "inCycle": false,
+    "complexityScore": 12
+  },
+  "index.js": {
+    "file": "index.js",
+    "imports": 2,
+    "importedBy": 0,
+    "depth": 0,
+    "inCycle": false,
+    "complexityScore": 2
+  },
+  "Todo.models.js": {
+    "file": "Todo.models.js",
+    "imports": 0,
+    "importedBy": 1,
+    "depth": 4,
+    "inCycle": false,
+    "complexityScore": 14
+  },
+  "Todo.routes.js": {
+    "file": "Todo.routes.js",
+    "imports": 1,
+    "importedBy": 1,
+    "depth": 2,
+    "inCycle": false,
+    "complexityScore": 9
+  }
+}

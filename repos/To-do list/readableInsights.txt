@@ -1,0 +1,1 @@
+Start from "C:\web devolapment\project\MINI PROJECTS\To-do list\src\index.js" — likely an entry point.
